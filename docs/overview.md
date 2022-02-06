@@ -1,8 +1,9 @@
 ---
 sidebar_position: 100
+slug: /
 ---
 
-# Overview
+# tfaction
 
 GitHub Actions collection for Opinionated Terraform Workflow
 
@@ -32,4 +33,4 @@ https://github.com/suzuki-shunsuke/tfaction-example
 
 ## LICENSE
 
-[MIT](LICENSE)
+[MIT](https://github.com/suzuki-shunsuke/tfaction/blob/main/LICENSE)

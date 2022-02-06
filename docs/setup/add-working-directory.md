@@ -8,8 +8,8 @@ sidebar_position: 200
   * For Terraform Plan files
   * For tfmigrate History files
 * Create AWS IAM Roles: https://github.com/suzuki-shunsuke/terraform-aws-tfaction
-* Update [tfaction-root.yaml](/docs/config/tfaction-root-yaml) if it is needed
-* [Scaffold the working directory](/docs/feature/scaffold-working-dir)
+* Update [tfaction-root.yaml](/config/tfaction-root-yaml) if it is needed
+* [Scaffold the working directory](/feature/scaffold-working-dir)
 
 ## AWS IAM Role
 

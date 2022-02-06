@@ -27,20 +27,3 @@ policy/
 ```
 
 ![image](https://user-images.githubusercontent.com/13323303/150035773-1702fba7-5058-412f-b41c-f69793237dd7.png)
-
-## Configuration
-
-github-comment.yaml
-
-```yaml
-exec:
-  conftest:
-  - when: ExitCode != 0
-    template: |
-      ## :x: Violate Conftest Policy ({{Env "TARGET"}})
-      {{template "link" .}} 
-      {{template "join_command" .}}
-      {{.CombinedOutput | AvoidHTMLEscape}}
-```
-
-GitHub Actions: [terraform-plan](../terraform-plan)

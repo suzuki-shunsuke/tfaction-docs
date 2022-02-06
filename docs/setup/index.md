@@ -9,9 +9,9 @@ AWS Account is required.
 * [Configure AWS Identity Provider](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
 * If you use Google Cloud Platform, setup [GCP Workload Identity Federation](https://github.com/google-github-actions/auth#setup)
 * Prepare following files
-  * [tfaction-root.yaml](/docs/config/tfaction-root-yaml)
-  * [tfaction.yaml](/docs/config/tfaction-yaml)
-  * [aqua.yaml](/docs/config/aqua)
+  * [tfaction-root.yaml](/config/tfaction-root-yaml)
+  * [tfaction.yaml](/config/tfaction-yaml)
+  * [aqua.yaml](/config/aqua)
   * templates of working directories
   * Renovate configuration
     * [example](https://github.com/suzuki-shunsuke/tfaction-example/blob/main/renovate.json5)

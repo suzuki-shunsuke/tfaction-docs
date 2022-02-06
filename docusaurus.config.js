@@ -12,26 +12,21 @@ const config = {
   baseUrl: '/tfaction/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
   organizationName: 'suzuki-shunsuke', // Usually your GitHub org/user name.
   projectName: 'tfaction', // Usually your repo name.
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/suzuki-shunsuke/tfaction-docs/edit/main',
+          routeBasePath: '/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        pages: false,
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -46,12 +41,6 @@ const config = {
         title: 'tfaction',
         items: [
           {
-            type: 'doc',
-            docId: 'overview',
-            position: 'left',
-            label: 'Overview',
-          },
-          {
             href: 'https://github.com/suzuki-shunsuke/tfaction',
             label: 'GitHub',
             position: 'right',
@@ -61,15 +50,6 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Overview',
-                to: '/docs/overview',
-              },
-            ],
-          },
           {
             title: 'Community',
             items: [],

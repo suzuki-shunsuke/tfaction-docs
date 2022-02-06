@@ -11,7 +11,7 @@ tfaction supports two types of secrets management.
 
 ### GitHub Secrets
 
-You can export GitHub Secrets as environment variables with [export-secrets](export-secrets) Action.
+You can export GitHub Secrets as environment variables with [export-secrets](https://github.com/suzuki-shunsuke/tfaction/tree/main/export-secrets) Action.
 
 ```yaml
 - uses: suzuki-shunsuke/tfaction/export-secrets@main
@@ -50,8 +50,8 @@ target_groups:
 
 ### AWS Secrets Manager
 
-You can export AWS Secrets Manager's Secrets as environment variables with [export-aws-secrets-manager](export-aws-secrets-manager) Action.
-This action is used in [setup](setup) Action, so you don't have to use this Action explicitly.
+You can export AWS Secrets Manager's Secrets as environment variables with [export-aws-secrets-manager](https://github.com/suzuki-shunsuke/tfaction/tree/main/export-aws-secrets-manager) Action.
+This action is used in [setup](https://github.com/suzuki-shunsuke/tfaction/tree/main/setup) Action, so you don't have to use this Action explicitly.
 
 Target Group Configuration
 
