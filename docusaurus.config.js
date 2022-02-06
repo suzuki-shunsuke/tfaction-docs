@@ -9,7 +9,7 @@ const config = {
   title: 'tfaction',
   tagline: 'GitHub Actions collection for Opinionated Terraform Workflow',
   url: 'https://suzuki-shunsuke.github.io',
-  baseUrl: '/tfaction/',
+  baseUrl: '/tfaction/docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   organizationName: 'suzuki-shunsuke', // Usually your GitHub org/user name.
