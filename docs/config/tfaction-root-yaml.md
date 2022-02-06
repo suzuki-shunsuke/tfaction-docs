@@ -5,7 +5,7 @@ sidebar_position: 150
 # tfaction-root.yaml
 
 * [JSON Schema](https://github.com/suzuki-shunsuke/tfaction/blob/main/schema/tfaction-root.json)
-* [Generated document from JSON Schema](https://suzuki-shunsuke.github.io/tfaction/config/tfaction-root.yaml.html)
+* [Generated document from JSON Schema](https://suzuki-shunsuke.github.io/tfaction/config/tfaction-root.html)
 
 ```yaml
 ---

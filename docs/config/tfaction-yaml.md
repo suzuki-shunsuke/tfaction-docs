@@ -5,7 +5,7 @@ sidebar_position: 200
 # tfaction.yaml
 
 * [JSON Schema](https://github.com/suzuki-shunsuke/tfaction/blob/main/schema/tfaction.json)
-* [Generated document from JSON Scheme](https://suzuki-shunsuke.github.io/tfaction/config/tfaction.yaml.html)
+* [Generated document from JSON Schema](https://suzuki-shunsuke.github.io/tfaction/config/tfaction.html)
 
 Please add `tfaction.yaml` in each working directory for tfaction to detect working directories.
 
