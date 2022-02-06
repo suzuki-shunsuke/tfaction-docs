@@ -27,7 +27,7 @@ name | permission | description
 --- | --- | ---
 id-token | write | For [aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials)
 contents | read | Checkout
-issues | read | `gh pr list`'s `-l` option requires the read premission
+issues | read | `gh pr list`'s `-l` option requires the read permission
 pull-requests | write | pull request labels
 
 ### Required permissions of GitHub App

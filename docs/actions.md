@@ -6,7 +6,7 @@ sidebar_position: 200
 
 ## Main Actions
 
-* [list-targets](https://github.com/suzuki-shunsuke/tfaction/tree/main/list-targets.md)
+* [list-targets](https://github.com/suzuki-shunsuke/tfaction/tree/main/list-targets)
 * [setup](https://github.com/suzuki-shunsuke/tfaction/tree/main/setup)
 * [test](https://github.com/suzuki-shunsuke/tfaction/tree/main/test)
 * [tfmigrate-plan](https://github.com/suzuki-shunsuke/tfaction/tree/main/tfmigrate-plan)
