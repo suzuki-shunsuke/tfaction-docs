@@ -5,42 +5,89 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        You can build good Terraform Workflow with GitHub Actions easily.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Monorepo support',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        tfaction supports Monorepo. CI is run only in working directories which code is changed by the pull request.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'Apply safely with Terraform Plan file',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        tfaction runs 'terraform plan' in pull request CI, and uploads the plan file to AWS S3.
+        tfaction runs 'terraform apply' in the default branch CI with uploaded plan file.
+        This guarantees the result of 'terraform apply'.
+        <a href="/tfaction/docs/feature/plan-file">For more details</a>
+      </>
+    ),
+  },
+  {
+    title: 'Notify the result of terraform plan and apply with tfcmt',
+    description: (
+      <>
+        tfcmt notifies the result of terraform plan and apply with tfcmt.
+      </>
+    ),
+  },
+  {
+    title: 'Automatioic code fix',
+    description: (
+      <>
+        tfaction updates .terraform.lock.hcl and formats Terraform Configuration automatically.
+      </>
+    ),
+  },
+  {
+    title: 'Safe update by Renovate',
+    description: (
+      <>
+        tfaction makes pull request by Renovate failed if the result of 'terraform plan' isn't 'No Changes'.
+        <a href="/tfaction/docs/feature/renovate">For more details</a>
+      </>
+    ),
+  },
+  {
+    title: 'Scaffold working directory by GitHub Actions',
+    description: (
+      <>
+        tfaction provides GitHub Actions Workflow to scaffold a working directory.
+        <a href="/tfaction/docs/feature/scaffold-working-dir">For more details</a>
+      </>
+    ),
+  },
+  {
+    title: 'Update related pull requests automatically when the base branch is updated',
+    description: (
+      <>
+        tfaction updates related pull requests automatically when the base branch is updated.
+        <a href="/tfaction/docs/feature/auto-update-related-prs">For more details</a>
+      </>
+    ),
+  },
+  {
+    title: 'Create pull requests automatically to handle the failure of terraform apply',
+    description: (
+      <>
+        Sometimes terraform apply fails even if terraform plan passed.
+        tfaction supports the handling by creating pull requests automatically.
+        <a href="/tfaction/docs/feature/follow-up-pr">For more details</a>
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
