@@ -23,9 +23,9 @@ Build good Terraform Workflow easily with GitHub Actions.
 * Manage dependencies with [aqua](https://aquaproj.github.io/)
 * Update dependencies with [Renovate](https://github.com/renovatebot/renovate)
 
-## Example
+## Getting Started
 
-https://github.com/suzuki-shunsuke/tfaction-example
+https://github.com/suzuki-shunsuke/tfaction-getting-started
 
 ## Versioning Policy
 
