@@ -23,6 +23,15 @@ Build good Terraform Workflow easily with GitHub Actions.
 * Manage dependencies with [aqua](https://aquaproj.github.io/)
 * Update dependencies with [Renovate](https://github.com/renovatebot/renovate)
 
+## Blog, Slide
+
+* English
+  * [2022-02-12 tfaction - Build Terraform Workflow with GitHub Actions](https://speakerdeck.com/szksh/tfaction-build-terraform-workflow-with-github-actions)
+* Japanese
+  * [2022-02-04 Terraform の CI を AWS CodeBuild から GitHub Actions + tfaction に移行しました](https://blog.studysapuri.jp/entry/2022/02/04/080000)
+  * [2022-01-24 tfaction - GitHub Actions で良い感じの Terraform Workflow を構築](https://zenn.dev/shunsuke_suzuki/articles/tfaction-introduction)
+  * [2022-02-06 tfaction の導入ガイド](https://zenn.dev/shunsuke_suzuki/articles/tfaction-setup)
+
 ## Getting Started
 
 https://github.com/suzuki-shunsuke/tfaction-getting-started
