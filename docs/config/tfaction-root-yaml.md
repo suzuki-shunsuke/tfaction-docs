@@ -7,6 +7,38 @@ sidebar_position: 200
 * [JSON Schema](https://github.com/suzuki-shunsuke/tfaction/blob/main/schema/tfaction-root.json)
 * [Generated document from JSON Schema](https://suzuki-shunsuke.github.io/tfaction/config/tfaction-root.html)
 
+## `target` and `working_directory`
+
+tfaction assumes that there are multiple working directories in the repository.
+Working directory is a directory where terraform commands such as `terraform init`, `terraform plan`, and `terraform apply` are run.
+tfaction treats directories where `tfaction.yaml` is located as working directories.
+Working directory has an attribute `target`, which is an identifier of the working directory. `target` must be unique.
+`target` is used in pull request comments and labels and the input of [scaffold working directory](/feature/scaffold-working-dir).
+The attribute `working_directory` of the working directory is a relative file path to the working directory.
+
+## `target_groups`
+
+`target_groups` is a list of target group configuration.
+tfaction searches the configuration of the working directory from `target_groups`.
+Target Group Configuration has attributes `working_directory` and `target`.
+If the Target Group's `working_directory` is the prefix of the working directory's `working_directory`,
+or the Target Group's `target` is the prefix of the working directory's `target`,
+the Target Group's configuration is used as the working directory's configuration and the search is stopped.
+
+The order of `target_groups` is important.
+
+```yaml
+target_groups:
+- working_directory: aws/
+  target: aws/
+  # ...
+- working_directory: aws/foo/ # This configuration is never used.
+  target: aws/foo/
+  # ...
+```
+
+## Example
+
 ```yaml
 ---
 draft_pr: true # default is false. If `draft_pr` is true, tfaction creates pull requests as draft
