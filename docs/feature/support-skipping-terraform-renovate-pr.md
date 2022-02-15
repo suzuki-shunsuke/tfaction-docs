@@ -10,13 +10,13 @@ tfaction suports skipping `terraform plan` and `terraform apply` in case of pull
 
 Basically in tfaction's workflow `terraform plan` and `terraform apply` are run.
 But you don't have to run `terraform plan` and `terraform apply` when some dependencies such as tfsec and tflint are updated.
-On the other hand, when Terraform and Terraform Providers are updated, we have to run `terraform plan` and `terraform apply`.
+On the other hand, when Terraform and Terraform Providers are updated, you have to run `terraform plan` and `terraform apply`.
 
-By skipping `terraform plan` and `terraform apply`, we can efficiently update dependencies.
+By skipping `terraform plan` and `terraform apply`, you can efficiently update dependencies.
 
-* We can prevent unexpected changes from being applied
-* [We can prevent CI failure due to `terraform plan`'s unexpected changes](renovate)
-* We can prevent API rate exceeded by `terraform plan` and `terraform apply`
+* You can prevent unexpected changes from being applied
+* [You can prevent CI failure due to `terraform plan`'s unexpected changes](renovate)
+* You can prevent API rate exceeded by `terraform plan` and `terraform apply`
 
 ## How to use
 
