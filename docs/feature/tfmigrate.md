@@ -42,3 +42,14 @@ Or
 1. Create a Pull Request with label `tfmigrate:<target B>` and `ignore:<target A>`
 
 The label `ignore:<target>` is important to prevent `terraform plan` and `terraform apply` from being run.
+
+## Scaffold migration pull request
+
+It is a little bothersome to write migration file.
+You can scaffold migration pull request by GitHub Actions.
+
+[workflow](https://github.com/suzuki-shunsuke/tfaction-example/blob/main/.github/workflows/scaffold-tfmigrate.yaml)
+
+![image](https://user-images.githubusercontent.com/13323303/154389701-737050cf-beca-4754-9852-76986e4ebf21.png)
+
+![image](https://user-images.githubusercontent.com/13323303/154388296-420b421e-1940-446a-a8e1-95d2b4f3f782.png)
