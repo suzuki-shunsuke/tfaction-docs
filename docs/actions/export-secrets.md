@@ -1,5 +1,7 @@
 # export-secrets
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/export-secrets)
+
 GitHub Actions to export secrets as environment variables
 
 ## Example

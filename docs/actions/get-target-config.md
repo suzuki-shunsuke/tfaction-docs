@@ -1,5 +1,7 @@
 # get-target-config
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/get-target-config)
+
 GitHub Actions to get target configuration
 
 ## Example

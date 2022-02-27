@@ -1,5 +1,7 @@
 # list-targets
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/list-targets)
+
 GitHub Actions to list targets
 
 ## Example

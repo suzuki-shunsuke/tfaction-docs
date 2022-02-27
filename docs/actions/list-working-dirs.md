@@ -1,5 +1,7 @@
 # list-working-dirs
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/list-working-dirs)
+
 GitHub Actions to list working directories
 
 ## Example

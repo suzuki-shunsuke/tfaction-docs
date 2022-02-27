@@ -1,5 +1,7 @@
 # create-follow-up-pr
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/create-follow-up-pr)
+
 GitHub Actions to create a follow up pull request
 
 ## Requirements
