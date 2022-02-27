@@ -1,5 +1,14 @@
 # test
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/test)
+
+Format, lint, and validate Terraform Configuration.
+
+* terraform fmt
+* terraform validate
+* tflint
+* tfsec
+
 ## Requirements
 
 * [tfmigrate](https://github.com/minamijoyo/tfmigrate)
@@ -7,7 +16,14 @@
 * [ghcp](https://github.com/int128/ghcp)
 * [github-comment](https://github.com/suzuki-shunsuke/github-comment)
 * [ci-info](https://github.com/suzuki-shunsuke/ci-info)
-* [tflint](https://github.com/aquasecurity/tfsec)
+* [tflint](https://github.com/terraform-linters/tflint)
+* [tfsec](https://github.com/aquasecurity/tfsec)
+
+## Dependent Actions
+
+* [suzuki-shunsuke/github-action-terraform-fmt](https://github.com/suzuki-shunsuke/github-action-terraform-fmt)
+* [suzuki-shunsuke/github-action-tfsec](https://github.com/suzuki-shunsuke/github-action-tfsec)
+* [suzuki-shunsuke/github-action-tflint](https://github.com/suzuki-shunsuke/github-action-tflint)
 
 ## Example
 

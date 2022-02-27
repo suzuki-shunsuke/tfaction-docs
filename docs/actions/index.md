@@ -20,6 +20,7 @@ sidebar_position: 200
 * scaffold working directory
   * [create-scaffold-pr](create-scaffold-pr)
   * [scaffold-working-dir](scaffold-working-dir)
+* [scaffold tfmigrate](scaffold-tfmigrate)
 
 ## Low level Actions
 

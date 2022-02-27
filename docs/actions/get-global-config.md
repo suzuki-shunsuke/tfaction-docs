@@ -1,5 +1,7 @@
 # get-global-config
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/get-global-config)
+
 GitHub Actions to get global configuration
 
 ## Example

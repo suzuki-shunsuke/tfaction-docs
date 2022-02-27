@@ -1,5 +1,7 @@
 # list-targets-with-changed-files
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/list-targets-with-changed-files)
+
 GitHub Actions to list targets
 
 ## Example

@@ -1,5 +1,9 @@
 # scaffold-working-dir
 
+[Scaffold a working directory](/feature/scaffold-working-dir)
+
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/scaffold-working-dir)
+
 ## Requirements
 
 * [aqua](https://aquaproj.github.io/)

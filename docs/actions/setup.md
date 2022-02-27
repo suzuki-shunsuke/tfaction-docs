@@ -1,5 +1,7 @@
 # setup
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/setup)
+
 ## Requirements
 
 * [ghcp](https://github.com/int128/ghcp)

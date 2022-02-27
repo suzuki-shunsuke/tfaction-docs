@@ -1,5 +1,7 @@
 # check-terraform-skip
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/check-terraform-skip)
+
 GitHub Actions to check if terraform plan and apply are skipped
 
 ## Example

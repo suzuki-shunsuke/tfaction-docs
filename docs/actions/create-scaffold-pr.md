@@ -1,5 +1,7 @@
 # create-scaffold-pr
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/create-scaffold-pr)
+
 ## Requirements
 
 * [aqua](https://aquaproj.github.io/)

@@ -1,5 +1,7 @@
 # export-aws-secrets-manager
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/export-aws-secrets-manager)
+
 GitHub Actions to export AWS Secrets Manager's secrets as environment variables
 
 ## Example

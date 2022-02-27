@@ -1,5 +1,7 @@
 # deploy-ssh-key
 
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/deploy-ssh-key)
+
 GitHub Actions to deploy a SSH key
 
 ## Example
