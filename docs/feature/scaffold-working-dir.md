@@ -18,3 +18,7 @@ Compared with executing commands at the localhost, GitHub Actions has the follow
   * You don't have to install tools at local
   * You can avoid the trouble due to the difference of local environment
   * GitHub Actions log is useful for trouble shooting
+
+## :bulb: Skip creating pull requests
+
+If you don't want to create pull requests by GitHub App, please see [Support skipping creating pull requests](skip-creating-pr).

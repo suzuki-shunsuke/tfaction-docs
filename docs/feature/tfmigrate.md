@@ -53,3 +53,7 @@ You can scaffold migration pull request by GitHub Actions.
 ![image](https://user-images.githubusercontent.com/13323303/154389701-737050cf-beca-4754-9852-76986e4ebf21.png)
 
 ![image](https://user-images.githubusercontent.com/13323303/154388296-420b421e-1940-446a-a8e1-95d2b4f3f782.png)
+
+### :bulb: Skip creating pull requests
+
+If you don't want to create pull requests by GitHub App, please see [Support skipping creating pull requests](skip-creating-pr).
