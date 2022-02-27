@@ -18,7 +18,7 @@ The label prefix `tfmigrate:` can be changed in the configuration file [tfaction
 ```yaml
 label_prefixes:
   tfmigrate: "migrate:"
-  ignore: "ignore:"
+  skip: "skip:"
 ```
 
 `tfmigrate plan` is run.
@@ -34,14 +34,14 @@ label_prefixes:
 If you migrate resources from the target `A` to the target `B` using [tfmigrate's multi_state](https://github.com/minamijoyo/tfmigrate#multi_state-mv).
 
 1. Create .tfmigrate.hcl and migration file in the working directory `A`
-1. Create a Pull Request with label `tfmigrate:<target A>` and `ignore:<target B>`
+1. Create a Pull Request with label `tfmigrate:<target A>` and `skip:<target B>`
 
 Or
 
 1. Create .tfmigrate.hcl and migration file in the working directory `B`
-1. Create a Pull Request with label `tfmigrate:<target B>` and `ignore:<target A>`
+1. Create a Pull Request with label `tfmigrate:<target B>` and `skip:<target A>`
 
-The label `ignore:<target>` is important to prevent `terraform plan` and `terraform apply` from being run.
+The label `skip:<target>` is important to prevent `terraform plan` and `terraform apply` from being run.
 
 ## Scaffold migration pull request
 

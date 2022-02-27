@@ -48,7 +48,7 @@ renovate_login: 'renovate[bot]' # default is "renovate[bot]"
 label_prefixes:
   target: "target:" # default is "target:"
   tfmigrate: "tfmigrate:" # default is "tfmigrate:"
-  ignore: "ignore:" # default is "ignore:"
+  skip: "skip:" # default is "skip:"
 
 target_groups:
 - working_directory: aws/
