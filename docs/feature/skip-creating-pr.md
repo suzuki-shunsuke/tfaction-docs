@@ -6,7 +6,7 @@ sidebar_position: 1000
 
 [#202](https://github.com/suzuki-shunsuke/tfaction/issues/202)
 
-tfaction suports creating some types of pull requests.
+tfaction supports creating some types of pull requests.
 
 * [Follow up Pull Request](follow-up-pr)
 * [Scaffold working directory Pull Request](scaffold-working-dir)
