@@ -13,6 +13,7 @@ sidebar_position: 200
   * [test](test)
   * [tfmigrate-plan](tfmigrate-plan)
   * [terraform-plan](terraform-plan)
+  * [test-module](test-module)
 * apply workflow
   * [tfmigrate-apply](tfmigrate-apply)
   * [terraform-apply](terraform-apply)
@@ -20,7 +21,9 @@ sidebar_position: 200
 * scaffold working directory
   * [create-scaffold-pr](create-scaffold-pr)
   * [scaffold-working-dir](scaffold-working-dir)
-* [scaffold tfmigrate](scaffold-tfmigrate)
+* [scaffold-tfmigrate](scaffold-tfmigrate)
+* [scaffold-module](scaffold-module)
+* [release-module](release-module)
 
 ## Low level Actions
 

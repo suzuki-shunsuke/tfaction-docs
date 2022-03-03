@@ -18,7 +18,7 @@ The label prefix `tfmigrate:` can be changed in the configuration file [tfaction
 ```yaml
 label_prefixes:
   tfmigrate: "migrate:"
-  ignore: "ignore:"
+  skip: "skip:"
 ```
 
 `tfmigrate plan` is run.
@@ -34,14 +34,14 @@ label_prefixes:
 If you migrate resources from the target `A` to the target `B` using [tfmigrate's multi_state](https://github.com/minamijoyo/tfmigrate#multi_state-mv).
 
 1. Create .tfmigrate.hcl and migration file in the working directory `A`
-1. Create a Pull Request with label `tfmigrate:<target A>` and `ignore:<target B>`
+1. Create a Pull Request with label `tfmigrate:<target A>` and `skip:<target B>`
 
 Or
 
 1. Create .tfmigrate.hcl and migration file in the working directory `B`
-1. Create a Pull Request with label `tfmigrate:<target B>` and `ignore:<target A>`
+1. Create a Pull Request with label `tfmigrate:<target B>` and `skip:<target A>`
 
-The label `ignore:<target>` is important to prevent `terraform plan` and `terraform apply` from being run.
+The label `skip:<target>` is important to prevent `terraform plan` and `terraform apply` from being run.
 
 ## Scaffold migration pull request
 
@@ -53,3 +53,7 @@ You can scaffold migration pull request by GitHub Actions.
 ![image](https://user-images.githubusercontent.com/13323303/154389701-737050cf-beca-4754-9852-76986e4ebf21.png)
 
 ![image](https://user-images.githubusercontent.com/13323303/154388296-420b421e-1940-446a-a8e1-95d2b4f3f782.png)
+
+### :bulb: Skip creating pull requests
+
+If you don't want to create pull requests by GitHub App, please see [Support skipping creating pull requests](skip-creating-pr).

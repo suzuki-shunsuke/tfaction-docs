@@ -25,4 +25,4 @@ working_directory_file | file name which locates on working directories
 renovate_login | Renovate login
 label_prefix_target | label prefix for target
 label_prefix_tfmigrate | label prefix for tfmigrate
-label_prefix_ignore | label prefix for ignore
+label_prefix_skip | label prefix for skip
