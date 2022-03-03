@@ -8,6 +8,14 @@ _tfaction's required version: `>= v0.5.0` [#221](https://github.com/suzuki-shuns
 
 tfaction supports scaffolding, testing, and releasing Terraform Modules.
 
+Please add a file `tfaction_module.yaml` in the Module directory.
+tfaction detects Modules with this file.
+Currently, tfaction doesn't read the content, so there is no problem even if the content is empty.
+
+```yaml
+{}
+```
+
 ## Test Module
 
 [test-module](/actions/test-module)
