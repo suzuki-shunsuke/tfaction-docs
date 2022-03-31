@@ -70,6 +70,21 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: 'LUUUGNZT4I',
+        // Public API key: it is safe to commit it
+        apiKey: '0f452b7f2ad5f1cfbaba24dcab778a3d',
+        indexName: 'tfaction',
+        // Optional: see doc section below
+        // contextualSearch: true,
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        // externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        //... other Algolia params
+      },
     }),
 };
 
