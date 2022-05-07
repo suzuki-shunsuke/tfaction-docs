@@ -15,9 +15,22 @@ steps:
   id: target-config
 ```
 
+```yaml
+envs:
+  TFACTION_WORKING_DIR: aws/services/foo
+  TFACTION_IS_APPLY: 'false'
+steps:
+- uses: suzuki-shunsuke/tfaction/get-target-config@main
+  id: target-config
+```
+
 ## Inputs
 
 Nothing.
+
+## Environment Variables
+
+Either `TFACTION_TARGET` or `TFACTION_WORKING_DIR` is required.
 
 ## Outputs
 

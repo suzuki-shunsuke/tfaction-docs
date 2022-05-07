@@ -36,7 +36,7 @@ terraform {
 
 ## Environment variables
 
-* TFACTION_TARGET (required)
+* TFACTION_TARGET or TFACTION_WORKING_DIR (required)
 * TFACTION_CONFIG (optional)
 
 ## Inputs
