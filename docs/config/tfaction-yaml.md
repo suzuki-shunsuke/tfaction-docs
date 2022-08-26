@@ -25,6 +25,7 @@ s3_bucket_name_plan_file:
 s3_bucket_name_tfmigrate_history:
 template_dir:
 gcs_bucket_name_plan_file:
+gcs_bucket_name_tfmigrate_history:
 aws_assume_role_arn:
 gcp_service_account:
 gcp_workload_identity_provider:

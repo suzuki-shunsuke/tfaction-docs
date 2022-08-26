@@ -7,7 +7,7 @@ GitHub Actions to run tfmigrate plan
 ## Requirements
 
 * [tfmigrate](https://github.com/minamijoyo/tfmigrate)
-* AWS CLI
+* AWS CLI or gsutil
 * [ghcp](https://github.com/int128/ghcp)
 * [github-comment](https://github.com/suzuki-shunsuke/github-comment)
 

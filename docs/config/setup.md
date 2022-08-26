@@ -4,9 +4,9 @@ sidebar_position: 100
 
 # Set up
 
-AWS Account is required.
+AWS or GCP Account is required.
 
-* [Configure AWS Identity Provider](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
+* If you use AWS, [Configure AWS Identity Provider](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
 * If you use Google Cloud Platform, setup [GCP Workload Identity Federation](https://github.com/google-github-actions/auth#setup)
 * Prepare following files
   * [tfaction-root.yaml](/config/tfaction-root-yaml)

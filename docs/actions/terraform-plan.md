@@ -7,7 +7,7 @@ GitHub Actions to run terraform plan
 ## Requirements
 
 * Terraform
-* AWS CLI
+* AWS CLI or gsutil
 * [conftest](https://www.conftest.dev/)
 * [tfcmt](https://github.com/suzuki-shunsuke/tfcmt)
 * [github-comment](https://github.com/suzuki-shunsuke/github-comment)
