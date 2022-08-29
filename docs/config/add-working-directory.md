@@ -4,16 +4,17 @@ sidebar_position: 150
 
 # How to add a working directory
 
-* Create S3 Buckets: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
+* Create [S3 Buckets](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) or [Google Cloud Storage Buckets](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket)
   * For Terraform Plan files
   * For tfmigrate History files
-* Create AWS IAM Roles: https://github.com/suzuki-shunsuke/terraform-aws-tfaction
+* If you use AWS, Create AWS IAM Roles: https://github.com/suzuki-shunsuke/terraform-aws-tfaction
+* If you use GCP, Create GCP Service Accounts
 * Update [tfaction-root.yaml](/config/tfaction-root-yaml) if it is needed
 * [Scaffold the working directory](/feature/scaffold-working-dir)
 
 ## AWS IAM Role
 
-To access S3 buckets, tfaction uses [aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials).
+To access AWS, tfaction uses [aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials).
 tfaction supports configuring Assume Role per working directory type and build type.
 
 e.g.
@@ -21,11 +22,14 @@ e.g.
 ```yaml
 - working_directory: github/services/
   # ...
-  aws_assume_role_arns:
-    tfmigrate_plan: arn:aws:iam::000000000000:role/GitHubActionsTerraformPRGitHub
-    terraform_plan: arn:aws:iam::000000000000:role/GitHubActionsTerraformPRGitHub
-    tfmigrate_apply: arn:aws:iam::000000000000:role/GitHubActionsTerraformMainGitHub
-    terraform_apply: arn:aws:iam::000000000000:role/GitHubActionsTerraformMainGitHub
+  terraform_plan_config:
+    aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_terraform_plan
+  tfmigrate_plan_config:
+    aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_tfmigrate_plan
+  terraform_apply_config:
+    aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_terraform_apply
+  tfmigrate_apply_config:
+    aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_tfmigrate_apply
 ```
 
 * tfmigrate_plan: Assume Role for [tfmigrate-plan](https://github.com/suzuki-shunsuke/tfaction/tree/main/tfmigrate-plan)
@@ -129,4 +133,28 @@ https://github.com/suzuki-shunsuke/terraform-aws-tfaction
         }
     ]
 }
+```
+
+## GCP
+
+To access GCP, tfaction uses [google-github-actions/auth](https://github.com/google-github-actions/auth).
+tfaction supports configuring Service Accounts per working directory type and build type.
+
+e.g.
+
+```yaml
+- working_directory: github/services/
+  # ...
+  terraform_plan_config:
+    gcp_service_account: terraform-plan@my-project.iam.gserviceaccount.com
+    gcp_workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+  tfmigrate_plan_config:
+    gcp_service_account: tfmigrate-plan@my-project.iam.gserviceaccount.com
+    gcp_workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+  terraform_apply_config:
+    gcp_service_account: terraform-apply@my-project.iam.gserviceaccount.com
+    gcp_workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+  tfmigrate_apply_config:
+    gcp_service_account: tfmigrate-apply@my-project.iam.gserviceaccount.com
+    gcp_workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
 ```

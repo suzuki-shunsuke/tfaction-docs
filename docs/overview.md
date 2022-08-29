@@ -19,7 +19,7 @@ Build good Terraform Workflow easily with GitHub Actions.
 * Monorepo
   * There are multiple Terraform Working Directory in a repository
 * GitHub Actions
-* Store terraform plan files and tfmigrate history files at AWS S3
+* Store terraform plan files and tfmigrate history files at AWS S3 or Google Cloud Storage
 * Manage dependencies with [aqua](https://aquaproj.github.io/)
 * Update dependencies with [Renovate](https://github.com/renovatebot/renovate)
 

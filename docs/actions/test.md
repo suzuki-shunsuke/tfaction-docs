@@ -12,7 +12,6 @@ Format, lint, and validate Terraform Configuration.
 ## Requirements
 
 * [tfmigrate](https://github.com/minamijoyo/tfmigrate)
-* AWS CLI
 * [ghcp](https://github.com/int128/ghcp)
 * [github-comment](https://github.com/suzuki-shunsuke/github-comment)
 * [ci-info](https://github.com/suzuki-shunsuke/ci-info)
