@@ -24,7 +24,7 @@ Currently, tfaction doesn't read the content, so there is no problem even if the
 
 [scaffold-module](/actions/scaffold-module)
 
-:bulb: If you don't want to create pull requests by GitHub App, please see [Support skipping creating pull requests](skip-creating-pr).
+:bulb: If you don't want to create pull requests by GitHub App, please see [Support skipping creating pull requests](skip-creating-pr.md).
 
 ## Release Module
 

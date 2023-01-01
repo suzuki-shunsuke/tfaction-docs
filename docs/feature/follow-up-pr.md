@@ -21,4 +21,4 @@ For example, if two jobs failed, two pull requests would be created.
 
 ## :bulb: Skip creating pull requests
 
-If you don't want to create pull requests by GitHub App, please see [Support skipping creating pull requests](skip-creating-pr).
+If you don't want to create pull requests by GitHub App, please see [Support skipping creating pull requests](skip-creating-pr.md).
