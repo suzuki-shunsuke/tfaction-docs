@@ -6,8 +6,8 @@ sidebar_position: 100
 
 ## Configuration File
 
-* [tfaction-root.yaml](tfaction-root-yaml)
-* [tfaction.yaml](tfaction-yaml)
+* [tfaction-root.yaml](tfaction-root-yaml.md)
+* [tfaction.yaml](tfaction-yaml.md)
 
 ## Environment Variables
 
