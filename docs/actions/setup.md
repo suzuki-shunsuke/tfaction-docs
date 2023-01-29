@@ -26,12 +26,20 @@ name | type | description
 --- | --- | ---
 github_app_token | string | GitHub Access Token. `github.token` can't be used because it can't invoke GitHub Actions Workflow
 
+`github_app_token`'s required permissions
+
+* `contents: write`: To push a commit
+
 ### Optional Inputs
 
 name | type | default | description
 --- | --- | --- | ---
 github_token | string | `github.token` | GitHub Access Token
 ssh_key | string | '' | SSH Private Key
+
+`github_token`'s required permissions
+
+* `pull-requests: write`: To post a comment by github-comment
 
 ## Outputs
 

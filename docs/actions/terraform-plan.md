@@ -16,23 +16,23 @@ GitHub Actions to run terraform plan
 
 ```yaml
 - uses: suzuki-shunsuke/tfaction/terraform-plan@main
-  with:
-    github_app_token: ${{ secrets.GITHUB_APP_TOKEN }}
 ```
 
 ## Inputs
 
 ### Required Inputs
 
-name | environment variable | description
---- | --- | ---
-github_app_token | | GitHub Access Token. `github.token` can't be used because it can't invoke GitHub Actions Workflow
+Nothing.
 
 ### Optional Inputs
 
 name | environment variable | default | description
 --- | --- | --- | ---
 github_token | | `github.token` | GitHub Access Token
+
+`github_token`'s rquired permissions
+
+* `pull-requests: write`: To post comments by tfcmt and github-comment
 
 ## Outputs
 

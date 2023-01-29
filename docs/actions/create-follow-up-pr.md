@@ -25,11 +25,22 @@ name | description
 --- | ---
 github_app_token | GitHub Access Token. `github.token` can't be used because it can't invoke GitHub Actions Workflow
 
+`github_app_token`'s required permissions
+
+* `contents: write`: To create an empty commit
+* `pull-requests: write`: To create a pull request
+
 ### Optional Inputs
 
 name | environment variable | default | description
 --- | --- | --- | ---
 github_token | | `github.token` | GitHub Access Token
+
+`github_token`'s required permissions
+
+* `pull-requests: write`
+  * To create Issue Labels
+  * To post comments by github-comment
 
 ## Outputs
 

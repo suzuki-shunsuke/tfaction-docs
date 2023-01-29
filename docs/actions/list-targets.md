@@ -23,6 +23,10 @@ name | default | description
 --- | --- | ---
 github_token | `secrets.GITHUB_TOKEN` | GitHub Access Token
 
+`github_token`'s required permissions
+
+* `pull-requests: write`: To post comments by github-comment
+
 ## Outputs
 
 name | type | description

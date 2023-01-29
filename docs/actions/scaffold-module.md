@@ -29,8 +29,13 @@
 
 name | description
 --- | ---
-github_app_token | GitHub Access Token
+github_token | GitHub Access Token
 module_path | file path to Module
+
+`github_token`'s required permissions
+
+* `contents: write`: To create a commit
+* `pull-requests: write`: To create a pull request if `skip_create_pr` is `false`
 
 ### Optional Inputs
 

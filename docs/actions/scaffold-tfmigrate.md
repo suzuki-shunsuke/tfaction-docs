@@ -25,6 +25,11 @@ name | description
 --- | ---
 github_app_token | GitHub Access Token
 
+`github_app_token`'s required permissions
+
+* `contents: write`: To create a commit
+* `pull-requests: write`: To create a pull request and set a label if `skip_create_pr` is `false`
+
 ### Optional Inputs
 
 name | default | description
