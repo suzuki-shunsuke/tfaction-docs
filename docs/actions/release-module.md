@@ -37,6 +37,10 @@ name | default | description
 --- | --- | ---
 github_token | `github.token` | GitHub Access Token
 
+`github_token`'s required permisions
+
+* `contents: write`: To create a tag and a release
+
 ## Outputs
 
 Nothing.

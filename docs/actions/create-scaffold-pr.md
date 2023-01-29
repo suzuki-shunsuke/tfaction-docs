@@ -29,6 +29,11 @@ name | type | description
 --- | --- | ---
 github_app_token | string | GitHub Access Token. `github.token` can't be used because it can't invoke GitHub Actions Workflow
 
+`github_app_token`'s required permissions
+
+* `contents: write`: To push commits
+* `pull-requests: write`: To create a pull request
+
 ### Optional Inputs
 
 Nothing.
