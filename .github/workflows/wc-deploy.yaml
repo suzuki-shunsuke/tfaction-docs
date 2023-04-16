@@ -25,6 +25,13 @@ jobs:
           cache: 'yarn'
       - run: yarn install
       - run: yarn build
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@021a2405c7f990db57f5eae5397423dcc554159c # v1
+        if: "! inputs.is_pr"
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
       - uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847 # v3.9.3
         if: "! inputs.is_pr"
         with:
