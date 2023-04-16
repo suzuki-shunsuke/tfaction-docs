@@ -6,7 +6,7 @@ sidebar_position: 700
 
 [#151](https://github.com/suzuki-shunsuke/tfaction/issues/151) [#153](https://github.com/suzuki-shunsuke/tfaction/issues/153)
 
-tfaction suports skipping `terraform plan` and `terraform apply` in case of pull request by Renovate.
+tfaction supports skipping `terraform plan` and `terraform apply` in case of pull request by Renovate.
 
 Basically in tfaction's workflow `terraform plan` and `terraform apply` are run.
 But you don't have to run `terraform plan` and `terraform apply` when some dependencies such as tfsec and tflint are updated.

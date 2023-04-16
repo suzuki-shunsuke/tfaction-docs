@@ -30,7 +30,7 @@ name | environment variable | default | description
 --- | --- | --- | ---
 github_token | | `github.token` | GitHub Access Token
 
-`github_token`'s rquired permissions
+`github_token`'s required permissions
 
 * `pull-requests: write`: To post comments by tfcmt and github-comment
 
