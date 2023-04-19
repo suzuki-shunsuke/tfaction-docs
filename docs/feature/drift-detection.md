@@ -84,8 +84,8 @@ $ aqua g -i suzuki-shunsuke/tfaction-go
 
 Please run these workflows periodically.
 
-1. schedule-create-drift-issues.yaml: Create Drift Issues periodically
-1. schedule-detect-drifts.yaml: Test if each working directory has a drift periodically
+1. [schedule-create-drift-issues.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/153d444a08fd8163d8230fb405838b74767c52df/.github/workflows/schedule-create-drift-issues.yaml): Create Drift Issues periodically
+1. [schedule-detect-drifts.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/153d444a08fd8163d8230fb405838b74767c52df/.github/workflows/schedule-detect-drifts.yaml): Test if each working directory has a drift periodically
 
 #### 3.1. schedule-create-drift-issues.yaml
 
@@ -108,7 +108,7 @@ Please add some steps to `terraform-apply` and `tfmigrate-apply` jobs.
 
 1. Run `tfaction get-or-create-drift-issue` before `tfaction/setup`
 
-e.g.
+[example](https://github.com/suzuki-shunsuke/tfaction-example/blob/dd74d00551962a7b3329567685e11510bfc85bf6/.github/workflows/apply.yaml#L65-L68)
 
 ```yaml
 - run: tfaction get-or-create-drift-issue
@@ -124,6 +124,8 @@ If a drift issue isn't found, a new issue is created.
 The environment variables about the drift issue are set.
 
 2. Run `tfaction/update-drift-issue` in the end of the jobs. Set `if: always()` to run the step definitely.
+
+[example](https://github.com/suzuki-shunsuke/tfaction-example/blob/dd74d00551962a7b3329567685e11510bfc85bf6/.github/workflows/apply.yaml#L84-L88)
 
 ```yaml
 - uses: suzuki-shunsuke/tfaction/update-drift-issue@v0.6.0
