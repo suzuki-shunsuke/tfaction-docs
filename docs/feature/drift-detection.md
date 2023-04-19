@@ -4,6 +4,10 @@ sidebar_position: 850
 
 # Drift Detection
 
+_Check the drift periodically and track it using GitHub Issues_
+
+![image](https://user-images.githubusercontent.com/13323303/233079963-68765f2e-1efd-4278-b6c3-145eae9ef9c0.png)
+
 tfaction >= v0.6.0
 
 :::caution
@@ -36,7 +40,19 @@ tfaction checks if the drift exists at the following timing.
 
 The result of `terraform apply`, `tfmigrate apply`, or `terraform plan` is posted to the issue. The comment has links to the GitHub Actions Workflow and the pull request.
 
+e.g. An Issue was opened because `terraform apply` failed.
+
+![image](https://user-images.githubusercontent.com/13323303/233077124-4db0f8a5-1f82-4abd-b0b4-fb641fcee85e.png)
+
+e.g. An Issue was closed because `terraform apply` succeeded and the drift was resolved.
+
 ![image](https://user-images.githubusercontent.com/13323303/232356803-e1c7298f-362c-4f00-96f0-20f2ac8720f7.png)
+
+e.g. Drift is checked periodically.
+
+![image](https://user-images.githubusercontent.com/13323303/233079030-67bd01cc-b6bf-425a-bdeb-82447a31904a.png)
+
+![image](https://user-images.githubusercontent.com/13323303/233079963-68765f2e-1efd-4278-b6c3-145eae9ef9c0.png)
 
 ## Requirements
 
@@ -172,3 +188,19 @@ No. | the number of working directory | frequency of workflow | `num_of_issues` 
 1 | 10 | 1 / hour | 1 | 10 hour
 2 | 7 | 1 / day | 1 | 1 week
 3 | 1000 | 1 / 30 min | 3 | 1 week
+
+## How to handle issues
+
+Even if issues are created by Drift Detection,
+there is no meaning if you don't resolve them.
+
+How to use this feature is completely up to you, but we have some advices.
+
+* Don't handle all issues by only you. Handle issues by teams
+* Create a strategy to handle issues continuously
+* Create rules to handle issues and write a guide so that everyon can handle issues properly
+* Rotate person in charge of handling issues
+* Leave the issue handling to each working directory's owners
+* Review and improve the issue handling periodically
+
+The real time notification to the chat tool may be noisy and exhaust you, so we recommend making the time to check issues periodically (e.g. daily or weekly) rather than the real time notification.
