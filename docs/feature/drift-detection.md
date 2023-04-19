@@ -38,6 +38,13 @@ The result of `terraform apply`, `tfmigrate apply`, or `terraform plan` is poste
 
 ![image](https://user-images.githubusercontent.com/13323303/232356803-e1c7298f-362c-4f00-96f0-20f2ac8720f7.png)
 
+## Requirements
+
+- tfaction >= v0.6.0
+- tfaction-go >= v0.1.2
+- **github-comment >= v5.2.1**
+- **tfcmt >= v4.3.0**
+
 ## Set up
 
 1. Update tfaciton-root.yaml
