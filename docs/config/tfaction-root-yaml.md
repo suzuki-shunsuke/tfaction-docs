@@ -50,6 +50,10 @@ label_prefixes:
   tfmigrate: "tfmigrate:" # default is "tfmigrate:"
   skip: "skip:" # default is "skip:"
 
+# We don't recommend disabling this feature.
+# update_related_pull_requests:
+#   enabled: false
+
 target_groups:
 - working_directory: aws/
   target: aws/
