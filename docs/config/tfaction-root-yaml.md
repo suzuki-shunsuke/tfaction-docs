@@ -54,6 +54,11 @@ label_prefixes:
 # update_related_pull_requests:
 #   enabled: false
 
+# tfaction >= v0.5.25
+# https://github.com/suzuki-shunsuke/tfaction/pull/910
+# scaffold_working_directory:
+#   skip_adding_aqua_packages: true
+
 target_groups:
 - working_directory: aws/
   target: aws/
