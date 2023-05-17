@@ -100,8 +100,8 @@ $ aqua g -i suzuki-shunsuke/tfaction-go
 
 Please run these workflows periodically.
 
-1. [schedule-create-drift-issues.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/153d444a08fd8163d8230fb405838b74767c52df/.github/workflows/schedule-create-drift-issues.yaml): Create Drift Issues periodically
-1. [schedule-detect-drifts.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/153d444a08fd8163d8230fb405838b74767c52df/.github/workflows/schedule-detect-drifts.yaml): Test if each working directory has a drift periodically
+1. [schedule-create-drift-issues.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/e08e60bd71fde6d77972d82fa0bf242ebab9d5d7/.github/workflows/schedule-create-drift-issues.yaml): Create Drift Issues periodically
+1. [schedule-detect-drifts.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/e08e60bd71fde6d77972d82fa0bf242ebab9d5d7/.github/workflows/schedule-detect-drifts.yaml): Test if each working directory has a drift periodically
 
 #### 3.1. schedule-create-drift-issues.yaml
 
@@ -154,6 +154,10 @@ The environment variables about the drift issue are set.
 This step closes or reopens the drift issue according to the job result.
 If the job fails the issue is reopened. Or if the job succeeds the issue is closed.
 
+:::caution
+You have to update tfaction of all steps to v0.6.0 or later. If old tfaction is used in other steps drift detection doesn't work well.
+:::
+
 ### 5. Run `schedule-create-drift-issues.yaml` manually only once
 
 Drift Detection doesn't work well if GitHub Issues don't exist. So please run the workflow manually to create issues only once.
@@ -204,3 +208,11 @@ How to use this feature is completely up to you, but we have some advices.
 * Review and improve the issue handling periodically
 
 The real time notification to the chat tool may be noisy and exhaust you, so we recommend making the time to check issues periodically (e.g. daily or weekly) rather than the real time notification.
+
+## How to save cost 💰
+
+If you want to save cost, there are some options.
+
+1. Decrease the frequency of `schedule-detect-drifts` workflow
+1. Stop running `schedule-detect-drifts` workflow. Even if `schedule-detect-drifts` is stopped, drift issues are updated according to the result of `terraform apply` and `tfmigrate apply`. Maybe this is enough useful
+1. Use GitHub Actions Self hosted runner
