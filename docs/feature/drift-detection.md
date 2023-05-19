@@ -82,7 +82,7 @@ drift_detection:
   issue_repo_owner: suzuki-shunsuke # Repository owner of GitHub Issues. By default, Repository where GitHub Actions is run
   issue_repo_name: tfaction-example # Repository name of GitHub Issues. By default, Repository where GitHub Actions is run
   num_of_issues: 1 # The number of issues that scheduled job handles. The default value is `1`
-  duration: 1 # The default value is 168 (7 days)
+  duration: 1 # The default value is 168 (7 days). The scheduled workflow picks out working directories whose issues were updated before `duration` hours
 ```
 
 By default, drift issues are created in the same repository where tfaction is run.
@@ -115,8 +115,33 @@ Issues will be reopened when the drift will be detected.
 
 #### 3.2. schedule-detect-drifts.yaml
 
-1. Get some Issues whose last updated date is old and run `terraform plan` and updates Issues
+1. Pick out some Issues not checked recently and check the drift and updates Issues
 1. Archive Issues whose working directories are not found
+
+`tfaction-root.yaml`'s following settings affect the workflow.
+
+```yaml
+drift_detection:
+  num_of_issues: 1 # The maxmum number of issues that scheduled job handles. The default value is `1`
+  duration: 1 # The default value is 168 (7 days). The scheduled workflow picks out working directories whose issues were updated before `duration` hours
+```
+
+This workflow picks out at most `num_of_issues` working directories whose issues were updated before `duration` hours and checks if they have drifts.
+
+The pseudo query to pick out issues is like the following.
+
+```
+repo:${repo} "Terraform Drift" in:title sort:updated-asc updated:<${now - duration(hour)}
+```
+
+This means if all drift issues were updated within `duration` hours from now, no working directory aren't picked out.
+
+:::tip
+Why is the parameter `duration` needed?
+That is because the drift is checked by not only scheduled workflow but also apply workflow.
+If the apply workflow is run recently against a working directory, the scheduled workflow doesn't have to check the same working directory.
+So tfaction updates drift issues by not only the scheduled workflow but also the apply workflow, and restricts the target of the scheduled workflow by issue's last updated time and `duration`.
+:::
 
 ### 4. Update the apply workflow
 
