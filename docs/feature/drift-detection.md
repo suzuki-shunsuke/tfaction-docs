@@ -102,6 +102,7 @@ Please run these workflows periodically.
 
 1. [schedule-create-drift-issues.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/e08e60bd71fde6d77972d82fa0bf242ebab9d5d7/.github/workflows/schedule-create-drift-issues.yaml): Create Drift Issues periodically
 1. [schedule-detect-drifts.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/e08e60bd71fde6d77972d82fa0bf242ebab9d5d7/.github/workflows/schedule-detect-drifts.yaml): Test if each working directory has a drift periodically
+1. (Optional) [sync-drift-issue-description.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/9c57838983f2307472c6a9db97b40714379c3c77/.github/workflows/sync-drift-issue-description.yaml): Synchronize Drift Issue's description with the latest issue comment
 
 #### 3.1. schedule-create-drift-issues.yaml
 
@@ -142,6 +143,16 @@ That is because the drift is checked by not only scheduled workflow but also app
 If the apply workflow is run recently against a working directory, the scheduled workflow doesn't have to check the same working directory.
 So tfaction updates drift issues by not only the scheduled workflow but also the apply workflow, and restricts the target of the scheduled workflow by issue's last updated time and `minimum_detection_interval`.
 :::
+
+#### 3.3. sync-drift-issue-description.yaml
+
+If you want to reflect the latest drift detection's result to drift issue's description, please add the workflow to the repository drift issues are created.
+
+[sync-drift-issue-description.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/9c57838983f2307472c6a9db97b40714379c3c77/.github/workflows/sync-drift-issue-description.yaml) :warning: Please change `github.actor` properly
+
+This workflow is optional.
+
+![image](https://github.com/suzuki-shunsuke/tfaction-docs/assets/13323303/2e95f528-8c5d-410c-8dec-fe0dabd3e85a)
 
 ### 4. Update the apply workflow
 
