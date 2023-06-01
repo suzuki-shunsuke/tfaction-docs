@@ -59,6 +59,14 @@ label_prefixes:
 # scaffold_working_directory:
 #   skip_adding_aqua_packages: true
 
+# tfaction >= v0.6.0
+drift_detection:
+  enabled: false
+  issue_repo_owner: suzuki-shunsuke
+  issue_repo_name: tfaction-example
+  num_of_issues: 1
+  minimum_detection_interval: 1
+
 target_groups:
 - working_directory: aws/
   target: aws/
@@ -66,6 +74,8 @@ target_groups:
   s3_bucket_name_plan_file: '<S3 Bucket Name for Terraform Plan File>'
   s3_bucket_name_tfmigrate_history: '<S3 Bucket Name for tfmigrate history files>'
   template_dir: templates/aws # This is used by `scaffold-working-dir` action
+  drift_detection:
+    enabled: true
   terraform_plan_config:
     aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_terraform_plan
   tfmigrate_plan_config:

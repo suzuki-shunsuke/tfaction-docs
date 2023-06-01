@@ -79,6 +79,7 @@ drift_detection: {} # Enable Drift Detection with the default settings
 
 ```yaml
 drift_detection:
+  enabled: true
   issue_repo_owner: suzuki-shunsuke # Repository owner of GitHub Issues. By default, Repository where GitHub Actions is run
   issue_repo_name: tfaction-example # Repository name of GitHub Issues. By default, Repository where GitHub Actions is run
   num_of_issues: 1 # The number of issues that scheduled job handles. The default value is `1`
@@ -197,6 +198,38 @@ You have to update tfaction of all steps to v0.6.0 or later. If old tfaction is 
 ### 5. Run `schedule-create-drift-issues.yaml` manually only once
 
 Drift Detection doesn't work well if GitHub Issues don't exist. So please run the workflow manually to create issues only once.
+
+## Enable drift detection against only specific working directories
+
+By default Drift Detection is enabled against all working directories, but you can enable Drift Detection against only specific working directories.
+
+The priority is as following.
+
+1. tfaction.yaml's `drift_detection`
+1. target group's `drift_detection`
+1. tfaction-root.yaml's `drift_detection`
+
+e.g.
+
+tfaction-root.yaml
+
+```yaml
+drift_detection:
+  enabled: false
+
+target_groups:
+- working_directory: aws/
+  # ...
+  drift_detection:
+    enabled: true
+```
+
+tfaction.yaml
+
+```yaml
+drift_detection:
+  enabled: false
+```
 
 ## GitHub Access Token
 
