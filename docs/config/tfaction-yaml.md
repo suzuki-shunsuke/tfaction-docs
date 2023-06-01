@@ -38,4 +38,6 @@ terraform_apply_config:
   aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_terraform_apply
 tfmigrate_apply_config:
   aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_tfmigrate_apply
+drift_detection:
+  enabled: false
 ```
