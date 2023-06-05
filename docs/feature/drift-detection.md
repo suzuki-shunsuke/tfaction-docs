@@ -102,9 +102,9 @@ $ aqua g -i suzuki-shunsuke/tfaction-go
 
 Please run these workflows periodically.
 
-1. [schedule-create-drift-issues.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/e08e60bd71fde6d77972d82fa0bf242ebab9d5d7/.github/workflows/schedule-create-drift-issues.yaml): Create Drift Issues periodically
-1. [schedule-detect-drifts.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/e08e60bd71fde6d77972d82fa0bf242ebab9d5d7/.github/workflows/schedule-detect-drifts.yaml): Test if each working directory has a drift periodically
-1. (Optional) [sync-drift-issue-description.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/9c57838983f2307472c6a9db97b40714379c3c77/.github/workflows/sync-drift-issue-description.yaml): Synchronize Drift Issue's description with the latest issue comment
+1. [schedule-create-drift-issues.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/main/.github/workflows/schedule-create-drift-issues.yaml): Create Drift Issues periodically
+1. [schedule-detect-drifts.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/main/.github/workflows/schedule-detect-drifts.yaml): Test if each working directory has a drift periodically
+1. (Optional) [sync-drift-issue-description.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/main/.github/workflows/sync-drift-issue-description.yaml): Synchronize Drift Issue's description with the latest issue comment
 
 #### 3.1. schedule-create-drift-issues.yaml
 
@@ -150,7 +150,7 @@ So tfaction updates drift issues by not only the scheduled workflow but also the
 
 If you want to reflect the latest drift detection's result to drift issue's description, please add the workflow to the repository drift issues are created.
 
-[sync-drift-issue-description.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/9c57838983f2307472c6a9db97b40714379c3c77/.github/workflows/sync-drift-issue-description.yaml) :warning: Please change `github.actor` properly
+[sync-drift-issue-description.yaml](https://github.com/suzuki-shunsuke/tfaction-example/blob/main/.github/workflows/sync-drift-issue-description.yaml) :warning: Please change `github.actor` properly
 
 This workflow is optional.
 
@@ -162,7 +162,7 @@ Please add some steps to `terraform-apply` and `tfmigrate-apply` jobs.
 
 1. Run `tfaction get-or-create-drift-issue` before `tfaction/setup`
 
-[example](https://github.com/suzuki-shunsuke/tfaction-example/blob/dd74d00551962a7b3329567685e11510bfc85bf6/.github/workflows/apply.yaml#L65-L68)
+[example](https://github.com/suzuki-shunsuke/tfaction-example/blob/e8688924120f65c48839850a980feb241ac80dd8/.github/workflows/apply.yaml#L65-L68)
 
 ```yaml
 - run: tfaction get-or-create-drift-issue
@@ -179,7 +179,7 @@ The environment variables about the drift issue are set.
 
 2. Run `tfaction/update-drift-issue` in the end of the jobs. Set `if: always()` to run the step definitely.
 
-[example](https://github.com/suzuki-shunsuke/tfaction-example/blob/dd74d00551962a7b3329567685e11510bfc85bf6/.github/workflows/apply.yaml#L84-L88)
+[example](https://github.com/suzuki-shunsuke/tfaction-example/blob/e8688924120f65c48839850a980feb241ac80dd8/.github/workflows/apply.yaml#L84-L88)
 
 ```yaml
 - uses: suzuki-shunsuke/tfaction/update-drift-issue@v0.6.0
