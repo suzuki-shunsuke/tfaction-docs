@@ -37,6 +37,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'drift_detection',
+        content:
+          '<a href="/tfaction/docs/feature/drift-detection">tfaction supports Drift Detection (2023-06-05)</a>',
+        backgroundColor: '#7FFF00',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       navbar: {
         title: 'tfaction',
         items: [

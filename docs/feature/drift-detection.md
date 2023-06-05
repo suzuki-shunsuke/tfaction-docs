@@ -10,10 +10,6 @@ _Check the drift periodically and track it using GitHub Issues_
 
 tfaction >= v0.6.0
 
-:::caution
-2023-04-19 This feature isn't released yet.
-:::
-
 [#851](https://github.com/suzuki-shunsuke/tfaction/issues/851) [#876](https://github.com/suzuki-shunsuke/tfaction/pull/876)
 
 Drift Detection is the feature to detect `drift`. You can track the drift using GitHub Issues and resolve the drift continuously.
