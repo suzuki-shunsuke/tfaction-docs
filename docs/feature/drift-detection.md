@@ -12,6 +12,11 @@ tfaction >= v0.6.0
 
 [#851](https://github.com/suzuki-shunsuke/tfaction/issues/851) [#876](https://github.com/suzuki-shunsuke/tfaction/pull/876)
 
+Blogs:
+
+- [2023-06-05 tfaction による Terraform の Drift Detection](https://zenn.dev/shunsuke_suzuki/articles/tfaction-drift-detection)
+- [2023-06-05 Terraform's Drift Detection by tfaction](https://dev.to/suzukishunsuke/terraforms-drift-detection-by-tfaction-1dkh)
+
 Drift Detection is the feature to detect `drift`. You can track the drift using GitHub Issues and resolve the drift continuously.
 
 :::caution
