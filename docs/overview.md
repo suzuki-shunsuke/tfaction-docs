@@ -5,10 +5,12 @@ slug: /
 
 # tfaction
 
-tfaction is a framework for Monorepo to build full-featured Terraform Workflow by GitHub Actions.
+tfaction is a framework for Monorepo to build high level Terraform Workflows by GitHub Actions.
+You don't have to run `terraform apply` in your laptop, and don't have to reinvent the wheel for Terraform Workflows anymore.
 
 ## Features
 
+- Run `terraform plan` in pull requests, and run `terraform apply` by merging pull requests into the default branch
 - [Dynamic build matrix for Monorepo](/tfaction/docs/feature/build-matrix)
   - CI is run on only changed working directories
 - Notify the result of CI to pull requests with tfcmt, github-comment, and reviewdog
