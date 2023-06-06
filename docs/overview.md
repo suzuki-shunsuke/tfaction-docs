@@ -17,6 +17,7 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
   - You don't have to check CI log
 - [Run `terraform apply` safely using the plan file created by the merged pull request's `terraform plan`](/tfaction/docs/feature/plan-file)
 - [Update related pull requests automatically when the remote state is updated](/tfaction/docs/feature/auto-update-related-prs)
+  - Keep the result of CI including `terraform plan` up-to-date
 - [Create a pull request automatically to follow up the apply failure](/tfaction/docs/feature/follow-up-pr)
 - Support linters
   - terraform validate
@@ -25,13 +26,17 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
   - [conftest](https://www.conftest.dev/)
 - [Support tfmigrate](/tfaction/docs/feature/tfmigrate)
 - [Update dependencies by Renovate safely](/tfaction/docs/feature/renovate)
+  - Prevent Renovate from applying unexpected changes, and enables to merge pull requests without changes safely
 - [Workflows for Terraform Modules](/tfaction/docs/feature/module)
   - Scaffold, Test, Release Modules
 - Workflows for scaffolding
   - Scaffold a working directory, Terraform Module, pull request for tfmigrate
 - [Update .terraform.lock.hcl automatically](/tfaction/docs/feature/auto-fix)
+  - A commit is pushed automatically, so you don't have to update .terraform.lock.hcl yourself
 - [Format Terraform Configuration automatically](/tfaction/docs/feature/auto-fix)
+  - A commit is pushed automatically, so you don't have to format Terraform configuration yourself
 - [Drift Detection](/tfaction/docs/feature/drift-detection)
+  - Detect the drift periodically and manage the drift as GitHub Issues
 
 [Dynamic build matrix for Monorepo](/tfaction/docs/feature/build-matrix)
 
