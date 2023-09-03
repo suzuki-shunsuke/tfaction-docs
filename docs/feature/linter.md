@@ -10,6 +10,7 @@ If you don't want to run these linters, please stop using [test](/actions/test) 
 * terraform validate
 * [suzuki-shunsuke/github-action-tflint](https://github.com/suzuki-shunsuke/github-action-tflint)
 * [suzuki-shunsuke/github-action-tfsec](https://github.com/suzuki-shunsuke/github-action-tfsec)
+* [suzuki-shunsuke/trivy-config-action](https://github.com/suzuki-shunsuke/trivy-config-action)
 
 ## tflint
 
@@ -30,3 +31,11 @@ tfaction runs [tfsec](https://github.com/aquasecurity/tfsec) and notifies the re
 --
 
 ![mage](https://user-images.githubusercontent.com/13323303/153747838-ccbd4fba-6654-4589-84c8-7ae833644426.png)
+
+## Trivy
+
+![image](https://github.com/suzuki-shunsuke/trivy-config-action/assets/13323303/e4d7f6f7-3df3-44bb-8f98-535173ce096e)
+
+--
+
+![image](https://github.com/suzuki-shunsuke/trivy-config-action/assets/13323303/2d0c6224-8ae4-42f0-80d8-06488ff18f56)

@@ -22,6 +22,7 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
 - Support linters
   - terraform validate
   - [tfsec](https://github.com/aquasecurity/tfsec)
+  - [trivy](https://github.com/aquasecurity/trivy)
   - [tflint](https://github.com/terraform-linters/tflint)
   - [conftest](https://www.conftest.dev/)
 - [Support tfmigrate](/tfaction/docs/feature/tfmigrate)
@@ -51,6 +52,10 @@ Result of `terraform plan`
 Result of `tfsec`
 
 ![image](https://user-images.githubusercontent.com/13323303/153747798-0e6ac3d4-e335-4c20-8e2a-1f5b43205ff3.png)
+
+Result of `trivy`
+
+![image](https://github.com/suzuki-shunsuke/trivy-config-action/assets/13323303/e4d7f6f7-3df3-44bb-8f98-535173ce096e)
 
 Result of `tflint`
 

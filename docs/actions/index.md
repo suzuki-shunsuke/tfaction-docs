@@ -43,6 +43,7 @@ These Actions are used in Main Actions internally.
 
 * [suzuki-shunsuke/github-action-tflint](https://github.com/suzuki-shunsuke/github-action-tflint)
 * [suzuki-shunsuke/github-action-tfsec](https://github.com/suzuki-shunsuke/github-action-tfsec)
+* [suzuki-shunsuke/trivy-config-action](https://github.com/suzuki-shunsuke/trivy-config-action)
 * [suzuki-shunsuke/github-action-terraform-fmt](https://github.com/suzuki-shunsuke/github-action-terraform-fmt)
 * [aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials)
 * [google-github-actions/auth](https://github.com/google-github-actions/auth)
