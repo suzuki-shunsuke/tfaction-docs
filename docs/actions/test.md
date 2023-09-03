@@ -6,8 +6,9 @@ Format, lint, and validate Terraform Configuration.
 
 * terraform fmt
 * terraform validate
-* tflint
-* tfsec
+* tflint (You can disable)
+* tfsec (You can disable)
+* trivy (By default, Trivy is disabled)
 
 ## Requirements
 
@@ -17,12 +18,14 @@ Format, lint, and validate Terraform Configuration.
 * [ci-info](https://github.com/suzuki-shunsuke/ci-info)
 * [tflint](https://github.com/terraform-linters/tflint)
 * [tfsec](https://github.com/aquasecurity/tfsec)
+* [trivy](https://github.com/aquasecurity/trivy)
 
 ## Dependent Actions
 
 * [suzuki-shunsuke/github-action-terraform-fmt](https://github.com/suzuki-shunsuke/github-action-terraform-fmt)
 * [suzuki-shunsuke/github-action-tfsec](https://github.com/suzuki-shunsuke/github-action-tfsec)
 * [suzuki-shunsuke/github-action-tflint](https://github.com/suzuki-shunsuke/github-action-tflint)
+* [suzuki-shunsuke/trivy-config-action](https://github.com/suzuki-shunsuke/trivy-config-action)
 
 ## Example
 

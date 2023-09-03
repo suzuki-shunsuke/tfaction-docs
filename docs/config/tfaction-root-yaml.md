@@ -50,6 +50,14 @@ label_prefixes:
   tfmigrate: "tfmigrate:" # default is "tfmigrate:"
   skip: "skip:" # default is "skip:"
 
+# https://github.com/suzuki-shunsuke/tfaction/pull/1106
+# tfsec:
+#   enabled: true
+# tflint:
+#   enabled: true
+# trivy:
+#   enabled: false
+
 # We don't recommend disabling this feature.
 # update_related_pull_requests:
 #   enabled: false
