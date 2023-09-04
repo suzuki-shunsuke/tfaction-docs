@@ -8,6 +8,7 @@ Format, lint, and validate Terraform Module and generate document of Terraform M
 * terraform validate
 * tflint
 * tfsec
+* trivy
 * terraform-docs
 
 ## Requirements
@@ -16,6 +17,7 @@ Format, lint, and validate Terraform Module and generate document of Terraform M
 * [github-comment](https://github.com/suzuki-shunsuke/github-comment)
 * [tflint](https://github.com/terraform-linters/tflint)
 * [tfsec](https://github.com/aquasecurity/tfsec)
+* [trivy](https://github.com/aquasecurity/trivy)
 * [terraform-docs](https://terraform-docs.io/)
 
 ## Dependent Actions
@@ -23,6 +25,7 @@ Format, lint, and validate Terraform Module and generate document of Terraform M
 * [suzuki-shunsuke/github-action-terraform-fmt](https://github.com/suzuki-shunsuke/github-action-terraform-fmt)
 * [suzuki-shunsuke/github-action-tfsec](https://github.com/suzuki-shunsuke/github-action-tfsec)
 * [suzuki-shunsuke/github-action-tflint](https://github.com/suzuki-shunsuke/github-action-tflint)
+* [suzuki-shunsuke/trivy-config-action](https://github.com/suzuki-shunsuke/trivy-config-action)
 
 ## Example
 
