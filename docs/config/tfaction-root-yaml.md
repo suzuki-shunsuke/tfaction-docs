@@ -50,6 +50,13 @@ label_prefixes:
   tfmigrate: "tfmigrate:" # default is "tfmigrate:"
   skip: "skip:" # default is "skip:"
 
+aqua:
+  update_checksum:
+    # Update aqua-checksums.json in `setup` action
+    enabled: true # default is false
+    skip_push: false # default is false
+    prune: true # default is false
+
 # https://github.com/suzuki-shunsuke/tfaction/pull/1106
 # tfsec:
 #   enabled: true
