@@ -5,7 +5,7 @@ slug: /
 
 # tfaction
 
-tfaction is a framework for Monorepo to build high level Terraform Workflows by GitHub Actions.
+tfaction is a framework for a Monorepo to build high-level Terraform workflows using GitHub Actions.
 You don't have to run `terraform apply` in your laptop, and don't have to reinvent the wheel for Terraform Workflows anymore.
 
 ## Features
@@ -13,7 +13,7 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
 - Run `terraform plan` in pull requests, and run `terraform apply` by merging pull requests into the default branch
 - [Dynamic build matrix for Monorepo](/tfaction/docs/feature/build-matrix)
   - CI is run on only changed working directories
-- Notify the result of CI to pull requests with tfcmt, github-comment, and reviewdog
+- Notify the results of CI to pull requests using tfcmt, github-comment, and reviewdog.
   - You don't have to check CI log
 - [Run `terraform apply` safely using the plan file created by the merged pull request's `terraform plan`](/tfaction/docs/feature/plan-file)
 - [Update related pull requests automatically when the remote state is updated](/tfaction/docs/feature/auto-update-related-prs)
@@ -33,9 +33,9 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
 - Workflows for scaffolding
   - Scaffold a working directory, Terraform Module, pull request for tfmigrate
 - [Update .terraform.lock.hcl automatically](/tfaction/docs/feature/auto-fix)
-  - A commit is pushed automatically, so you don't have to update .terraform.lock.hcl yourself
+  - A commit is pushed automatically, so you don't have to update .terraform.lock.hcl manually
 - [Format Terraform Configuration automatically](/tfaction/docs/feature/auto-fix)
-  - A commit is pushed automatically, so you don't have to format Terraform configuration yourself
+  - A commit is pushed automatically, so you don't have to format Terraform configuration manually
 - [Drift Detection](/tfaction/docs/feature/drift-detection)
   - Detect the drift periodically and manage the drift as GitHub Issues
 
@@ -87,7 +87,7 @@ Result of `conftest`
 
 [Update dependencies by Renovate safely](/tfaction/docs/feature/renovate)
 
-CI fails if there are changes, which enables to merge pull requests without changes safely.
+CI fails if there are changes, which enables you to merge pull requests without unexpected changes safely.
 
 ![image](https://user-images.githubusercontent.com/13323303/150064670-2c6a646f-81f2-496f-b69a-873b6469593e.png)
 
