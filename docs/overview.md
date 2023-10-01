@@ -13,7 +13,7 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
 - Run `terraform plan` in pull requests, and run `terraform apply` by merging pull requests into the default branch
 - [Dynamic build matrix for Monorepo](/tfaction/docs/feature/build-matrix)
   - CI is run on only changed working directories
-- Notify the results of CI to pull requests using tfcmt, github-comment, and reviewdog.
+- Notify the results of CI to pull requests using tfcmt, github-comment, and reviewdog
   - You don't have to check CI log
 - [Run `terraform apply` safely using the plan file created by the merged pull request's `terraform plan`](/tfaction/docs/feature/plan-file)
 - [Update related pull requests automatically when the remote state is updated](/tfaction/docs/feature/auto-update-related-prs)
