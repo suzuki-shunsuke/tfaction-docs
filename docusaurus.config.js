@@ -40,7 +40,7 @@ const config = {
       announcementBar: {
         id: 'drift_detection',
         content:
-          '<a href="/tfaction/docs/feature/drift-detection">tfaction supports Drift Detection (2023-06-05)</a>',
+          '<a href="/tfaction/docs/feature/plan-file#tfaction-v070-migrated-plan-files-to-github-actions-artifacts">tfaction v0.7.0 migrated plan files to GitHub Actions Artifacts (2023-10-18)</a>',
         backgroundColor: '#7FFF00',
         textColor: '#091E42',
         isCloseable: true,
