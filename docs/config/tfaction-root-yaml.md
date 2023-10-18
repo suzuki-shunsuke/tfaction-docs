@@ -7,6 +7,20 @@ sidebar_position: 200
 * [JSON Schema](https://github.com/suzuki-shunsuke/tfaction/blob/main/schema/tfaction-root.json)
 * [Generated document from JSON Schema](https://suzuki-shunsuke.github.io/tfaction/config/tfaction-root.html)
 
+## `plan_workflow_name`
+
+From tfaction v0.7.0, this setting is required.
+
+```yaml
+plan_workflow_name: <GitHub Actions Workflow name running terraform-plan action>
+```
+
+e.g.
+
+```yaml
+plan_workflow_name: test
+```
+
 ## `target` and `working_directory`
 
 tfaction assumes that there are multiple working directories in the repository.
@@ -41,6 +55,8 @@ target_groups:
 
 ```yaml
 ---
+plan_workflow_name: test
+
 draft_pr: true # default is false. If `draft_pr` is true, tfaction creates pull requests as draft
 base_working_directory: "" # default is empty, which means the current directory
 working_directory_file: tfaction.yaml # default is "tfaction.yaml"
@@ -86,7 +102,6 @@ target_groups:
 - working_directory: aws/
   target: aws/
   aws_region: ap-northeast-1
-  s3_bucket_name_plan_file: '<S3 Bucket Name for Terraform Plan File>'
   s3_bucket_name_tfmigrate_history: '<S3 Bucket Name for tfmigrate history files>'
   template_dir: templates/aws # This is used by `scaffold-working-dir` action
   drift_detection:
@@ -103,7 +118,6 @@ target_groups:
 - working_directory: github/services/
   target: github/
   aws_region: ap-northeast-1
-  s3_bucket_name_plan_file: '<S3 Bucket Name for Terraform Plan File>'
   s3_bucket_name_tfmigrate_history: '<S3 Bucket Name for tfmigrate history files>'
   template_dir: templates/github
   aws_secrets_manager:
@@ -142,7 +156,6 @@ target_groups:
     secret_name: FOO_STAGING # Secret name
 
   gcs_bucket_name_tfmigrate_history: '<Google Cloud Storage Bucket Name for tfmigrate history files>'
-  gcs_bucket_name_plan_file: '<Google Cloud Storage Bucket Name for Terraform Plan File>'
   terraform_plan_config:
     aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_gcp_terraform_plan
     gcp_service_account: terraform@my-project.iam.gserviceaccount.com

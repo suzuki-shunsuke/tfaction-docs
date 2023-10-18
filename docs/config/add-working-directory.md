@@ -5,12 +5,18 @@ sidebar_position: 150
 # How to add a working directory
 
 * Create [S3 Buckets](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) or [Google Cloud Storage Buckets](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket)
-  * For Terraform Plan files
   * For tfmigrate History files
 * If you use AWS, Create AWS IAM Roles: https://github.com/suzuki-shunsuke/terraform-aws-tfaction
 * If you use GCP, Create GCP Service Accounts
 * Update [tfaction-root.yaml](/config/tfaction-root-yaml) if it is needed
 * [Scaffold the working directory](/feature/scaffold-working-dir)
+
+:::info
+Since tfaction v0.7.0, the storage for Terraform Plan files have been migrated from S3 or GCS to GitHub Actions Artifacts.
+So you don't have to create buckets and set permissions for them.
+
+Please see [here](/feature/plan-file#tfaction-v070-migrated-plan-files-to-github-actions-artifacts) for the detail.
+:::
 
 ## AWS IAM Role
 
@@ -85,13 +91,6 @@ https://github.com/suzuki-shunsuke/terraform-aws-tfaction
 {
     "Version": "2012-10-17",
     "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "s3:DeleteObject"
-            ],
-            "Resource": "arn:aws:s3:::<S3 Bucket for Plan File>/*"
-        },
         {
             "Effect": "Allow",
             "Action": [
