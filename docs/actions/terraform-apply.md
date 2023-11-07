@@ -6,11 +6,10 @@ GitHub Actions to run terraform apply
 
 ## Requirements
 
-* Terraform
-* AWS CLI or gsutil
-* [GitHub CLI](https://github.com/cli/cli)
-* [tfcmt](https://github.com/suzuki-shunsuke/tfcmt)
-* [github-comment](https://github.com/suzuki-shunsuke/github-comment)
+- Terraform
+- [GitHub CLI](https://github.com/cli/cli)
+- [tfcmt](https://github.com/suzuki-shunsuke/tfcmt)
+- [github-comment](https://github.com/suzuki-shunsuke/github-comment)
 
 ## Example
 
