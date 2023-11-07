@@ -2,13 +2,14 @@
 
 [Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/plan)
 
-tfaction >= v0.7.4 [#1275](https://github.com/suzuki-shunsuke/tfaction/pull/1275)
+tfaction >= v0.7.3 [#1275](https://github.com/suzuki-shunsuke/tfaction/pull/1275)
 
 GitHub Actions to execute tfmigrate plan or terraform plan
 
 ## Requirements
 
-- [tfmigrate](https://github.com/minamijoyo/tfmigrate)
+- Terraform
+- (Optional) [tfmigrate](https://github.com/minamijoyo/tfmigrate)
 - [ghcp](https://github.com/int128/ghcp)
 - [github-comment](https://github.com/suzuki-shunsuke/github-comment)
 

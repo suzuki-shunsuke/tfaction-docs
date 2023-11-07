@@ -2,11 +2,14 @@
 
 [Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/apply)
 
+tfaction >= v0.7.3 [#1275](https://github.com/suzuki-shunsuke/tfaction/pull/1275)
+
 GitHub Actions to run terraform apply or tfmigrate apply
 
 ## Requirements
 
 - Terraform
+- (Optional) [tfmigrate](https://github.com/minamijoyo/tfmigrate)
 - [GitHub CLI](https://github.com/cli/cli)
 - [tfcmt](https://github.com/suzuki-shunsuke/tfcmt)
 - [github-comment](https://github.com/suzuki-shunsuke/github-comment)
