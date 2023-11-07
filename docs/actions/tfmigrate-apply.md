@@ -6,11 +6,10 @@ GitHub Actions to run tfmigrate apply
 
 ## Requirements
 
-* [tfmigrate](https://github.com/minamijoyo/tfmigrate)
-* AWS CLI or gsutil
-* [GitHub CLI](https://github.com/cli/cli)
-* [ghcp](https://github.com/int128/ghcp)
-* [github-comment](https://github.com/suzuki-shunsuke/github-comment)
+- [tfmigrate](https://github.com/minamijoyo/tfmigrate)
+- [GitHub CLI](https://github.com/cli/cli)
+- [ghcp](https://github.com/int128/ghcp)
+- [github-comment](https://github.com/suzuki-shunsuke/github-comment)
 
 ## Example
 
