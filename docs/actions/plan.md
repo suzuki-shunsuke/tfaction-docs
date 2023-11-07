@@ -1,19 +1,22 @@
-# tfmigrate-plan
+# plan
 
-[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/tfmigrate-plan)
+[Source code](https://github.com/suzuki-shunsuke/tfaction/tree/main/plan)
 
-GitHub Actions to run tfmigrate plan
+tfaction >= v0.7.3 [#1275](https://github.com/suzuki-shunsuke/tfaction/pull/1275)
+
+GitHub Actions to execute tfmigrate plan or terraform plan
 
 ## Requirements
 
-- [tfmigrate](https://github.com/minamijoyo/tfmigrate)
+- Terraform
+- (Optional) [tfmigrate](https://github.com/minamijoyo/tfmigrate)
 - [ghcp](https://github.com/int128/ghcp)
 - [github-comment](https://github.com/suzuki-shunsuke/github-comment)
 
 ## Example
 
 ```yaml
-- uses: suzuki-shunsuke/tfaction/tfmigrate-plan@main
+- uses: suzuki-shunsuke/tfaction/plan@main
   with:
     github_app_token: ${{ secrets.GITHUB_APP_TOKEN }}
 ```

@@ -11,10 +11,12 @@ sidebar_position: 200
 * [export-secrets](export-secrets.md)
 * pull request workflow
   * [test](test.md)
+  * [plan](plan.md)
   * [tfmigrate-plan](tfmigrate-plan.md)
   * [terraform-plan](terraform-plan.md)
   * [test-module](test-module.md)
 * apply workflow
+  * [apply](apply.md)
   * [tfmigrate-apply](tfmigrate-apply.md)
   * [terraform-apply](terraform-apply.md)
   * [create-follow-up-pr](create-follow-up-pr.md)
