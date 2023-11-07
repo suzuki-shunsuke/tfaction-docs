@@ -29,6 +29,7 @@ id-token | write | For [aws-actions/configure-aws-credentials](https://github.co
 contents | read | Checkout
 issues | read | `gh pr list`'s `-l` option requires the read permission
 pull-requests | write | pull request labels
+actions | read | Download artifacts 
 
 ### Required permissions of GitHub App
 
@@ -36,6 +37,7 @@ name | permission | description
 --- | --- | ---
 Contents | write | create commits and branches
 Pull Requests | write | open pull requests
+Actions | read | download artifacts
 
 ### Create GitHub App
 
