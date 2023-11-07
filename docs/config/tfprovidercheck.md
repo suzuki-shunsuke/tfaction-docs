@@ -12,7 +12,7 @@ To use tfprovidercheck with tfaction, you need to run `get-target-config` action
 
 e.g.
 
-https://github.com/suzuki-shunsuke/tfaction-example/blob/9008d4c162d75624a27f0820337afdef50e8e609/.github/workflows/wc-test.yaml#L121-L145
+https://github.com/suzuki-shunsuke/tfaction-example/blob/836e7ce5decb3e8c3c368e3f534da3cc3343e858/.github/workflows/wc-test.yaml#L121-L145
 
 ```yaml
 - uses: suzuki-shunsuke/tfaction/setup@26effa08b92b77b5cfe04e2a25c15845fd00b04f # v0.7.2
@@ -24,8 +24,8 @@ https://github.com/suzuki-shunsuke/tfaction-example/blob/9008d4c162d75624a27f082
 
 - run: |
     set -euo pipefail
-    tfprovidercheck -v
-    github-comment exec -- terraform version -json | github-comment exec -- tfprovidercheck
+    github-comment exec -var "tfaction_target:$TFACTION_TARGET" -- tfprovidercheck -v
+    github-comment exec -var "tfaction_target:$TFACTION_TARGET" -- terraform version -json | github-comment exec -- tfprovidercheck
   working-directory: ${{ steps.target-config.outputs.working_directory }}
   env:
     TFPROVIDERCHECK_CONFIG_BODY: |
@@ -39,4 +39,23 @@ https://github.com/suzuki-shunsuke/tfaction-example/blob/9008d4c162d75624a27f082
 - uses: suzuki-shunsuke/tfaction/test@26effa08b92b77b5cfe04e2a25c15845fd00b04f # v0.7.2
   with:
     github_app_token: ${{steps.token.outputs.token}}
+```
+
+github-comment.yaml
+
+```yaml
+hide:
+  default: |
+    Comment.HasMeta && Comment.Meta.SHA1 != Commit.SHA1 && ! (Comment.Meta.Program == "tfcmt" && Comment.Meta.Command == "apply")
+exec:
+  default:
+  - when: ExitCode != 0
+    template: |
+      ## :x: Failed {{if .Vars.tfaction_target}}({{.Vars.tfaction_target}}){{end}}
+
+      {{template "link" .}}
+
+      {{template "join_command" .}}
+
+      {{template "hidden_combined_output" .}}
 ```
