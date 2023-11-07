@@ -15,6 +15,12 @@ tfaction updates pull request branches that have a pull request label `A` by usi
 By updating pull request branch, the result of CI including uploaded Terraform Plan file is updated.
 Otherwise,the uploaded Terraform Plan file becomes stale and it would fail to run `terraform apply`.
 
+## Exclude specific pull requests
+
+tfaction >= v0.7.3 [#1272](https://github.com/suzuki-shunsuke/tfaction/pull/1272)
+
+If you want to exclude specific pull requests, please add the pull request label `tfaction:disable-auto-update`.
+
 ## Disable this feature
 
 tfaction >= v0.5.23 [#892](https://github.com/suzuki-shunsuke/tfaction/issues/892) [#898](https://github.com/suzuki-shunsuke/tfaction/pull/898)
