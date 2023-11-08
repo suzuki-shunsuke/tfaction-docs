@@ -286,10 +286,3 @@ If you want to save cost, there are some options.
 1. Decrease the frequency of `schedule-detect-drifts` workflow
 1. Stop running `schedule-detect-drifts` workflow. Even if `schedule-detect-drifts` is stopped, drift issues are updated according to the result of `terraform apply` and `tfmigrate apply`. Maybe this is enough useful
 1. Use GitHub Actions Self hosted runner
-
-## :warning: Known Issue
-
-https://github.com/suzuki-shunsuke/tfaction/discussions/983
-
-tfaction may reopen an issue without any comment if GitHub Actions step such as `checkout` and `aqua-installer` fails.
-This issue rarely occurs, but it may occurs if the monorepo is large or GitHub Actions is unstable.
