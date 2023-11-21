@@ -5,6 +5,8 @@ slug: /
 
 # tfaction
 
+[Who uses tfaction?](#who-uses-tfaction) | [Release Note](https://github.com/suzuki-shunsuke/tfaction/releases) | [MIT LICENSE](https://github.com/suzuki-shunsuke/tfaction/blob/main/LICENSE)
+
 tfaction is a framework for a Monorepo to build high-level Terraform workflows using GitHub Actions.
 You don't have to run `terraform apply` in your laptop, and don't have to reinvent the wheel for Terraform Workflows anymore.
 
@@ -111,6 +113,15 @@ CI fails if there are changes, which enables you to merge pull requests without 
 
 ![image](https://user-images.githubusercontent.com/13323303/233079963-68765f2e-1efd-4278-b6c3-145eae9ef9c0.png)
 
+## Who uses tfaction?
+
+:::info
+If you want to add your company or organization to the list, please send a pull request!
+[Reference](https://github.com/suzuki-shunsuke/tfaction/discussions/1280)
+:::
+
+- [Topotal Inc](https://topotal.com/)
+
 ## Blog, Slide
 
 - English
@@ -122,10 +133,6 @@ CI fails if there are changes, which enables you to merge pull requests without 
   - [2022-02-06 tfaction の導入ガイド](https://zenn.dev/shunsuke_suzuki/articles/tfaction-setup)
   - [2022-02-04 Terraform の CI を AWS CodeBuild から GitHub Actions + tfaction に移行しました](https://blog.studysapuri.jp/entry/2022/02/04/080000)
   - [2022-01-24 tfaction - GitHub Actions で良い感じの Terraform Workflow を構築](https://zenn.dev/shunsuke_suzuki/articles/tfaction-introduction)
-
-## Getting Started
-
-https://github.com/suzuki-shunsuke/tfaction-getting-started
 
 ## Release Notes
 
