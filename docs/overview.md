@@ -126,6 +126,7 @@ If you want to add your company or organization to the list, please send a pull 
   - [Migrate Terraform CI from AWS CodeBuild to GitHub Actions](https://devs.quipper.com/2022/02/25/terraform-github-actions.html)
 - [Henry, Inc.](https://corp.henry-app.jp/)
   - Contributed to make [tfaction](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v0.5.16) and [tfmigrate](https://github.com/minamijoyo/tfmigrate/releases/tag/v0.3.7) GoogleCloud-ready
+- [Macbee Planet, Inc.](https://macbee-planet.com)
 
 ## Blog, Slide
 
