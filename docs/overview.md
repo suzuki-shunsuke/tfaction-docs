@@ -5,7 +5,7 @@ slug: /
 
 # tfaction
 
-[Who uses tfaction?](#who-uses-tfaction) | [Release Note](https://github.com/suzuki-shunsuke/tfaction/releases) | [MIT LICENSE](https://github.com/suzuki-shunsuke/tfaction/blob/main/LICENSE)
+[Who uses tfaction?](https://github.com/suzuki-shunsuke/tfaction#who-uses-tfaction) | [Release Note](https://github.com/suzuki-shunsuke/tfaction/releases) | [MIT LICENSE](https://github.com/suzuki-shunsuke/tfaction/blob/main/LICENSE)
 
 tfaction is a framework for a Monorepo to build high-level Terraform workflows using GitHub Actions.
 You don't have to run `terraform apply` in your laptop, and don't have to reinvent the wheel for Terraform Workflows anymore.
@@ -115,18 +115,7 @@ CI fails if there are changes, which enables you to merge pull requests without 
 
 ## Who uses tfaction?
 
-:::info
-If you want to add your company or organization to the list, please send a pull request!
-[Reference](https://github.com/suzuki-shunsuke/tfaction/discussions/1280)
-:::
-
-- [Topotal Inc](https://topotal.com/)
-- Recruit Co., Ltd. - [StudySapuri](https://brand.studysapuri.jp/) and [Quipper](https://www.quipper.com/) product team
-  - [Terraform の CI を AWS CodeBuild から GitHub Actions + tfaction に移行しました](https://blog.studysapuri.jp/entry/2022/02/04/080000)
-  - [Migrate Terraform CI from AWS CodeBuild to GitHub Actions](https://devs.quipper.com/2022/02/25/terraform-github-actions.html)
-- [Henry, Inc.](https://corp.henry-app.jp/)
-  - Contributed to make [tfaction](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v0.5.16) and [tfmigrate](https://github.com/minamijoyo/tfmigrate/releases/tag/v0.3.7) GoogleCloud-ready
-- [Macbee Planet, Inc.](https://macbee-planet.com)
+Please see [here](https://github.com/suzuki-shunsuke/tfaction#who-uses-tfaction).
 
 ## Blog, Slide
 
