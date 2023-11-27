@@ -4,7 +4,7 @@ sidebar_position: 900
 
 # Linters
 
-tfaction runs some linters in [test](/actions/test) Action.
+tfaction runs some linters in [test](https://github.com/suzuki-shunsuke/tfaction/blob/main/test/action.yaml) and [test-module](https://github.com/suzuki-shunsuke/tfaction/blob/main/test-module/action.yaml) actions.
 
 - terraform validate
 - [suzuki-shunsuke/github-action-tflint](https://github.com/suzuki-shunsuke/github-action-tflint)
