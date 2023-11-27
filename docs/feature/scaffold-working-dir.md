@@ -4,7 +4,28 @@ sidebar_position: 350
 
 # Scaffold working directory by GitHub Actions `workflow_dispatch` event
 
-Execute GitHub Actions Workflow manually.
+When you add a new working directory, you can scaffold the directory by GitHub Actions.
+tfaction provides a workflow for it.
+
+1. Prepare template directories to scaffold working directories.
+
+[example](https://github.com/suzuki-shunsuke/tfaction-example/tree/main/templates/aws)
+
+2. Configure `tfaction-root.yaml`'s `target_groups` to use the template.
+
+[example](https://github.com/suzuki-shunsuke/tfaction-example/blob/783dbeeea9e8da0edcfd7c02225708d2979880cd/tfaction-root.yaml#L34)
+
+```yaml
+target_groups:
+  - template_dir: templates/aws
+    # ...
+```
+
+3. Set up the workflow
+
+[example](https://github.com/suzuki-shunsuke/tfaction-example/blob/main/.github/workflows/scaffold-working-directory.yaml)
+
+4. Execute GitHub Actions Workflow manually.
 
 ![image](https://user-images.githubusercontent.com/13323303/150027710-19ce0659-4a7a-490d-ad7b-bf77e409099f.png)
 
@@ -18,6 +39,27 @@ Compared with executing commands at the localhost, GitHub Actions has the follow
   * You don't have to install tools at local
   * You can avoid the trouble due to the difference of local environment
   * GitHub Actions log is useful for trouble shooting
+
+## Placeholders
+
+The following placeholders in templates are replaced.
+
+- `%%TARGET%%`: target
+- `%%S3_BUCKET_NAME_TFMIGRATE_HISTORY%%`: S3 Bucket Name for tfmigrate history files
+- `%%GCS_BUCKET_NAME_TFMIGRATE_HISTORY%%`: GCS Bucket Name for tfmigrate history files
+
+e.g.
+
+```tf
+terraform {
+  required_version = ">= 1.0"
+  backend "s3" {
+    bucket = "S3 Bucket Name"
+    key    = "%%TARGET%%/v1/terraform.tfstate" # Placeholder
+    region = "us-east-1"
+  }
+}
+```
 
 ## :bulb: Skip creating pull requests
 
