@@ -60,6 +60,14 @@ plan_workflow_name: test
 draft_pr: true # default is false. If `draft_pr` is true, tfaction creates pull requests as draft
 base_working_directory: "" # default is empty, which means the current directory
 working_directory_file: tfaction.yaml # default is "tfaction.yaml"
+
+# conftest_policy_directory: tfaction >= v1.1.0
+# conftest_policy_directory is the file path to the conftest policy directory.
+# The default value is "policy".
+# If conftest_policy_directory isn't set and the directory policy doesn't exist, contest is skipped.
+# If conftest_policy_directory is set but the directory doesn't exist, the action fails.
+conftest_policy_directory: terraform/policy
+
 renovate_login: 'renovate[bot]' # default is "renovate[bot]"
 label_prefixes:
   target: "target:" # default is "target:"
