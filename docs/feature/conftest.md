@@ -27,3 +27,19 @@ policy/
 ```
 
 ![image](https://user-images.githubusercontent.com/13323303/150035773-1702fba7-5058-412f-b41c-f69793237dd7.png)
+
+## Policy directory
+
+tfaction >= v1.1.0
+
+You can change the directory by the setting `conftest_policy_directory` in tfaction-root.yaml.
+
+e.g. tfaction-root.yaml
+
+```yaml
+conftest_policy_directory: terraform/policy
+```
+
+The default value is "policy".
+If `conftest_policy_directory` isn't set and the directory policy doesn't exist, contest is skipped.
+If `conftest_policy_directory` is set but the directory doesn't exist, the action fails.
