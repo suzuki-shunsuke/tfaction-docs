@@ -40,6 +40,7 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
   - A commit is pushed automatically, so you don't have to format Terraform configuration manually
 - [Drift Detection](/tfaction/docs/feature/drift-detection)
   - Detect the drift periodically and manage the drift as GitHub Issues
+- [Support Terraform compatible tools such as OpenTofu and Terragrunt](/tfaction/docs/feature/use-terraform-compatible-tool)
 
 [Dynamic build matrix for Monorepo](/tfaction/docs/feature/build-matrix)
 
