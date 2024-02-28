@@ -37,14 +37,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // announcementBar: {
-      //   id: 'drift_detection',
-      //   content:
-      //     '<a href="https://github.com/suzuki-shunsuke/tfaction/releases/tag/v1.0.0">tfaction v1 is out (2023-12-18)</a>',
-      //   backgroundColor: '#7FFF00',
-      //   textColor: '#091E42',
-      //   isCloseable: true,
-      // },
+      announcementBar: {
+        id: 'support_terraform_compatible_tools',
+        content:
+          '<a href="https://suzuki-shunsuke.github.io/tfaction/docs/feature/use-terraform-compatible-tool">Support Terraform compatible tools such as OpenTofu and Terragrunt (2024-02-28)</a>',
+        backgroundColor: '#7FFF00',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       navbar: {
         title: 'tfaction',
         items: [
