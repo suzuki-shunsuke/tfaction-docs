@@ -27,6 +27,7 @@ gcs_bucket_name_tfmigrate_history:
 aws_assume_role_arn:
 gcp_service_account:
 gcp_workload_identity_provider:
+terraform_command: terraform
 secrets:
 terraform_plan_config:
   aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_terraform_plan

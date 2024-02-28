@@ -106,12 +106,15 @@ drift_detection:
   num_of_issues: 1
   minimum_detection_interval: 1
 
+terraform_command: terraform
+
 target_groups:
 - working_directory: aws/
   target: aws/
   aws_region: ap-northeast-1
   s3_bucket_name_tfmigrate_history: '<S3 Bucket Name for tfmigrate history files>'
   template_dir: templates/aws # This is used by `scaffold-working-dir` action
+  terraform_command: terraform
   drift_detection:
     enabled: true
   terraform_plan_config:
