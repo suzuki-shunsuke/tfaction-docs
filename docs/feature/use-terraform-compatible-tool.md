@@ -4,7 +4,7 @@ sidebar_position: 1110
 
 # Use a Terraform compatible tool
 
-[#1554](https://github.com/suzuki-shunsuke/tfaction/pull/1291) tfaction >= v1.2.0
+[#1554](https://github.com/suzuki-shunsuke/tfaction/pull/1554) tfaction >= [v1.2.0](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v1.2.0)
 
 ## Overview
 
