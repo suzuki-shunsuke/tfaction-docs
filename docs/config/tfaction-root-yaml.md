@@ -81,6 +81,11 @@ aqua:
     skip_push: false # default is false
     prune: true # default is false
 
+env:
+  # Environment variables
+  # <environment variable name>: <value>
+  FOO: foo
+
 # https://github.com/suzuki-shunsuke/tfaction/pull/1106
 # tfsec:
 #   enabled: true
@@ -132,12 +137,18 @@ target_groups:
   s3_bucket_name_tfmigrate_history: '<S3 Bucket Name for tfmigrate history files>'
   template_dir: templates/github
   aws_secrets_manager:
+  env:
+    # Environment variables
+    FOO: foo
   # export AWS Secrets Manager's secret as environment variable
   - secret_id: bar
     envs:
     - env_name: BAR
   terraform_plan_config:
     aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_github_terraform_plan
+    env:
+      # Environment variables
+      FOO: foo
   tfmigrate_plan_config:
     aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_github_tfmigrate_plan
   terraform_apply_config:
