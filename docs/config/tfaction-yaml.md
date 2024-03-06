@@ -28,9 +28,15 @@ aws_assume_role_arn:
 gcp_service_account:
 gcp_workload_identity_provider:
 terraform_command: terraform
+env:
+  # Environment variables
+  FOO: foo
 secrets:
 terraform_plan_config:
   aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_terraform_plan
+  env:
+    # Environment variables
+    FOO: foo
 tfmigrate_plan_config:
   aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_tfmigrate_plan
 terraform_apply_config:
