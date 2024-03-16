@@ -41,6 +41,7 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
 - [Drift Detection](/tfaction/docs/feature/drift-detection)
   - Detect the drift periodically and manage the drift as GitHub Issues
 - [Support Terraform compatible tools such as OpenTofu and Terragrunt](/tfaction/docs/feature/use-terraform-compatible-tool)
+- [Support running CI on working directories that depend on a updated local path Module](/tfaction/docs/feature/local-path-module)
 
 [Dynamic build matrix for Monorepo](/tfaction/docs/feature/build-matrix)
 
