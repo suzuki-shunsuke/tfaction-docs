@@ -38,9 +38,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       announcementBar: {
-        id: 'support_terraform_compatible_tools',
+        id: 'support_local_path_module',
         content:
-          '<a href="https://suzuki-shunsuke.github.io/tfaction/docs/feature/use-terraform-compatible-tool">Support Terraform compatible tools such as OpenTofu and Terragrunt (2024-02-28)</a>',
+          '<a href="/tfaction/docs/feature/local-path-module">Support running CI on working directories that depend on a updated local path Module (2024-03-16)</a>',
         backgroundColor: '#7FFF00',
         textColor: '#091E42',
         isCloseable: true,
