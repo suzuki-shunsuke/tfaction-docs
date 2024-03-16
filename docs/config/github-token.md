@@ -38,6 +38,7 @@ name | permission | description
 Contents | write | create commits and branches
 Pull Requests | write | open pull requests
 Actions | read | download artifacts
+Issue | write | create labels
 
 ### Create GitHub App
 
