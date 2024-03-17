@@ -14,7 +14,7 @@ https://docs.github.com/en/actions/security-guides/automatic-token-authenticatio
 
 > When you use the repository's GITHUB_TOKEN to perform tasks, events triggered by the GITHUB_TOKEN will not create a new workflow run.
 
-So we recommend issueing an access token from a GitHub App.
+So we recommend issuing an access token from a GitHub App.
 There are some GitHub Actions to issue an access token from a GitHub App.
 
 - https://github.com/tibdex/github-app-token
