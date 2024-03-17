@@ -49,7 +49,7 @@ permissions:
 - `issues: write`
   - Create labels
 - `actions: read`
-  - [Download plan files from GitHub Artifacts](/docs/feature/plan-file)
+  - [Download plan files from GitHub Artifacts](/tfaction/docs/feature/plan-file)
 
 ## Refer to tfaction-example
 
