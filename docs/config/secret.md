@@ -48,6 +48,26 @@ target_groups:
       secret_name: ATLAS_API_KEY_STAGING_READ_ONLY
 ```
 
+:::caution
+If secrets aren't set as you expect, please check if secrets are passed to this action properly.
+If you use reusable workflows, maybe secrets aren't passed to the reusable workflow.
+If so, please pass secrets properly.
+
+- https://docs.github.com/en/actions/using-workflows/reusing-workflows#passing-inputs-and-secrets-to-a-reusable-workflow
+- https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsecrets
+
+From tfaction v1.3.1, the action outputs the list of secrets passed to the action as a log.
+So please check the log.
+
+e.g.
+
+```
+Run suzuki-shunsuke/tfaction/export-secrets@v1.3.1
+The list of secret names passed to the action: gh_app_id, gh_app_private_Key, github_token
+Error: "secret is not found: FASTLY_API_KEY"
+```
+:::
+
 ### AWS Secrets Manager
 
 You can export AWS Secrets Manager's Secrets as environment variables with [export-aws-secrets-manager](https://github.com/suzuki-shunsuke/tfaction/tree/main/export-aws-secrets-manager) Action.
