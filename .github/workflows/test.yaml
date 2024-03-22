@@ -107,7 +107,7 @@ jobs:
       - uses: aquaproj/aqua-installer@7c7338067bdb97d5bea2acc82b5870afca470d18 # v2.3.0
         # Install ghcp
         with:
-          aqua_version: v2.3.1
+          aqua_version: v2.25.1
         env:
           AQUA_GITHUB_TOKEN: ${{github.token}}
       - uses: aquaproj/update-checksum-action@0fef5fa12e81e046bb29078f76b99bb29fa4e696 # v0.2.3
@@ -131,7 +131,7 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: aquaproj/aqua-installer@7c7338067bdb97d5bea2acc82b5870afca470d18 # v2.3.0
         with:
-          aqua_version: v2.3.1
+          aqua_version: v2.25.1
         env:
           AQUA_GITHUB_TOKEN: ${{github.token}}
       - run: ghalint run
@@ -145,7 +145,7 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: aquaproj/aqua-installer@7c7338067bdb97d5bea2acc82b5870afca470d18 # v2.3.0
         with:
-          aqua_version: v2.3.1
+          aqua_version: v2.25.1
         env:
           AQUA_GITHUB_TOKEN: ${{github.token}}
       - run: typos
