@@ -1,6 +1,0 @@
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>suzuki-shunsuke/renovate-config#2.3.0"
-  ]
-}
