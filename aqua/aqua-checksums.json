@@ -1,18 +1,18 @@
 {
   "checksums": [
     {
-      "id": "github_release/github.com/crate-ci/typos/v1.14.5/typos-v1.14.5-x86_64-apple-darwin.tar.gz",
-      "checksum": "20423A3C1A7CA582B9447CA62EA13C630606E12DB6CF5C10CE9C725207358080247A401934CB5178EC5670096058B0A7ADCACBD2FB660F2AF0F4AF3381857ECE",
+      "id": "github_release/github.com/crate-ci/typos/v1.19.0/typos-v1.19.0-x86_64-apple-darwin.tar.gz",
+      "checksum": "3FE595F266174B9B039D7CA2FD7A95CC133C3288CD00A4C82C75213978212857BE6BAC036EA89557A245ABF1B189BA6A6F80985EC060EB8C54E58A3B7D328B53",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/crate-ci/typos/v1.14.5/typos-v1.14.5-x86_64-pc-windows-msvc.zip",
-      "checksum": "F18CB7B991D7AEA786569D6BCF1594695A85397AD478A7DDA2236FB9C98C27C0C79C6569A5C801ADF9477E2BFC07FAEF7E78B4EDDE95FBA7DB6551DB30584108",
+      "id": "github_release/github.com/crate-ci/typos/v1.19.0/typos-v1.19.0-x86_64-pc-windows-msvc.zip",
+      "checksum": "82260ADEA44819ECE2D22FDE596DCF7E12C166EFE06CEE555BC3F8AA9AF2222D1B13E6D8E1338D9FC0EABBC1125E4A1E4098C894377FAACCD67D8CE7781DCB78",
       "algorithm": "sha512"
     },
     {
-      "id": "github_release/github.com/crate-ci/typos/v1.14.5/typos-v1.14.5-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "1DB888B6B0E5F27649BD7FCD49BED1AFB3E6E3C5501BE3EB910903CAC2C660D8CC5127309FDE6094B78C79C5CF90DB692C39C9029D34928709DF2D9096324AE5",
+      "id": "github_release/github.com/crate-ci/typos/v1.19.0/typos-v1.19.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "C48F831C1D4F1012DFE76D04E2E1DB89A59A00F5C99645621992F2532F2FE200CE41F6340E584A53F0704BF85CA3DC43BC6919C8DBF011E3F7DA2B2855652367",
       "algorithm": "sha512"
     },
     {
@@ -31,63 +31,63 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/reviewdog/reviewdog/v0.14.1/reviewdog_0.14.1_Darwin_arm64.tar.gz",
-      "checksum": "B8E79B3AE4168914F9F7ED7253D74F239A27789BCAF4AF02246044000F18C532",
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.17.2/reviewdog_0.17.2_Darwin_arm64.tar.gz",
+      "checksum": "0B16689B5CB5C4210A4478436E99A4CCD0DAAF86700E310D2E5E26717E770B4E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/reviewdog/reviewdog/v0.14.1/reviewdog_0.14.1_Darwin_x86_64.tar.gz",
-      "checksum": "634EF4B420916F9BB91A11ED4927BC378BD37462958998AFA6C0551EDC1B67C9",
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.17.2/reviewdog_0.17.2_Darwin_x86_64.tar.gz",
+      "checksum": "8FAEDDFA755048DC2FB3AD73AE7FEA805CFCDCFEC5997AFEFAC66370899BBF8C",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/reviewdog/reviewdog/v0.14.1/reviewdog_0.14.1_Linux_arm64.tar.gz",
-      "checksum": "D387556EF1D291A360A3D2053A6DE5AD856DD6C362DD0AC5793415B0C2C0AEB8",
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.17.2/reviewdog_0.17.2_Linux_arm64.tar.gz",
+      "checksum": "873B075EAE781EB28E710BF42A6C08EDB4423A6ABE389CB94E2B08AF06FD4CDA",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/reviewdog/reviewdog/v0.14.1/reviewdog_0.14.1_Linux_x86_64.tar.gz",
-      "checksum": "BF0ADA422E13A94AAFB26BCD8ADE3AE6D98E6A3DB4A9C1CB17686EE64E021314",
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.17.2/reviewdog_0.17.2_Linux_x86_64.tar.gz",
+      "checksum": "1CB3FC67BD15225423F50FF06E543F7A4BB9BE5C3952996848EC412A6CB4C390",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/reviewdog/reviewdog/v0.14.1/reviewdog_0.14.1_Windows_arm64.tar.gz",
-      "checksum": "2B92CCEBAA516A7A618F92E6C360855B0C661D905CBDD758EA957F3A46F9103D",
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.17.2/reviewdog_0.17.2_Windows_arm64.tar.gz",
+      "checksum": "70D5F41B27355595B9E070E232DADCCB827B26037B0FEBF9F6CBCC5E8B759392",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/reviewdog/reviewdog/v0.14.1/reviewdog_0.14.1_Windows_x86_64.tar.gz",
-      "checksum": "D6009ABE6A5777962118FD227A2A9E6BAFC1E15368AF76D54EAE88CF8631E1AD",
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.17.2/reviewdog_0.17.2_Windows_x86_64.tar.gz",
+      "checksum": "5ADE60862B036D79212475B926D6EA41AE1F36A443F328F31704383D6FF4035C",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.24/actionlint_1.6.24_darwin_amd64.tar.gz",
-      "checksum": "CE9DD9653700E3ED00464DFFDDD3E2A61358CF96425F2F3DFF840DFC1E105EAB",
+      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_darwin_amd64.tar.gz",
+      "checksum": "1459F1EC2182162C85BEDDACFF9B05D1CB921BFB2656A6FD9151E9CD84CD63E9",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.24/actionlint_1.6.24_darwin_arm64.tar.gz",
-      "checksum": "5477F8A5A4073EF086525A2512B2BF1201641CD544034AD0C66F329590638242",
+      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_darwin_arm64.tar.gz",
+      "checksum": "4B8EFF986643B8D9918C4FD3ADA9C0EEE7E59230A53A46A9BD9686521DCAD170",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.24/actionlint_1.6.24_linux_amd64.tar.gz",
-      "checksum": "3C5818744143A5D6754EDD3DCC4C2B32C9DFCDD3BB30E0E108FB5E5C505262D4",
+      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_linux_amd64.tar.gz",
+      "checksum": "5C9B6E5418F688B7F7C7E3D40C13D9E41B1CA45FB6A2C35788B0580E34B7300F",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.24/actionlint_1.6.24_linux_arm64.tar.gz",
-      "checksum": "93CC9D1F4A01F0658423B41ECF3BD8C17C619003EC683BE8BAC9264D0361D0D8",
+      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_linux_arm64.tar.gz",
+      "checksum": "03FFE5891DA7800EC39533543667697B5C292D0FF8B906397B43C58374EC052A",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.24/actionlint_1.6.24_windows_amd64.zip",
-      "checksum": "B3F43E3FD5A30785F9B9D4A495A7164870698B6A8F072BBD0503E70EF2735F8B",
+      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_windows_amd64.zip",
+      "checksum": "2040AEB2530A80ABBB923493F6947443203B7E60E829CB7BAD1C8CDE1483C376",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rhysd/actionlint/v1.6.24/actionlint_1.6.24_windows_arm64.zip",
-      "checksum": "170187FCB01B7D21B5D25D42DC1BEB5DA32E5FE3DD04E9433CB641CA1A2191E4",
+      "id": "github_release/github.com/rhysd/actionlint/v1.6.27/actionlint_1.6.27_windows_arm64.zip",
+      "checksum": "BC082F32A036A86DAD364BC46E2D707C4DA5615598E2D50DA2CB840CFF97731D",
       "algorithm": "sha256"
     },
     {
@@ -121,8 +121,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v3.151.0/registry.yaml",
-      "checksum": "349817C06C03BB602A35A8524777B316902D67032252AAF51A86A7E40DBFEFA60E898E53C5EEC3724C14132CD763BB803946FF7FE4784EAE7C41E22E9B90C1CF",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.155.0/registry.yaml",
+      "checksum": "0F4CFA5B70B3C421A95BA8BA751C1BC2D6CFD5B597E870DB9BF16868E149074069296B6669DE1AC490DBAE70BD2BDD16B5DDDB5799355F118D88A899D4568B53",
       "algorithm": "sha512"
     }
   ]
