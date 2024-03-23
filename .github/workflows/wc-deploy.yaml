@@ -32,11 +32,19 @@ jobs:
       - run: yarn build
       - name: Generate token
         id: generate_token
-        uses: tibdex/github-app-token@021a2405c7f990db57f5eae5397423dcc554159c # v1
+        uses: tibdex/github-app-token@021a2405c7f990db57f5eae5397423dcc554159c # v1.7.0
         if: "! inputs.is_pr"
         with:
           app_id: ${{ secrets.app_id }}
           private_key: ${{ secrets.private_key }}
+          repositories: >-
+            [
+              "tfaction"
+            ]
+          permissions: >-
+            {
+              "contents": "write"
+            }
       - uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847 # v3.9.3
         if: "! inputs.is_pr"
         with:
