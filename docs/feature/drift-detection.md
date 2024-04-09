@@ -268,11 +268,11 @@ No. | the number of working directory | frequency of workflow | `num_of_issues` 
 Even if issues are created by Drift Detection,
 there is no meaning if you don't resolve them.
 
-How to use this feature is completely up to you, but we have some advices.
+How to use this feature is completely up to you, but we have some advice.
 
 * Don't handle all issues by only you. Handle issues by teams
 * Create a strategy to handle issues continuously
-* Create rules to handle issues and write a guide so that everyon can handle issues properly
+* Create rules to handle issues and write a guide so that everyone can handle issues properly
 * Rotate person in charge of handling issues
 * Leave the issue handling to each working directory's owners
 * Review and improve the issue handling periodically
