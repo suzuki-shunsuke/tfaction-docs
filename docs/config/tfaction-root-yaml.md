@@ -188,16 +188,28 @@ target_groups:
     aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_gcp_terraform_plan
     gcp_service_account: terraform@my-project.iam.gserviceaccount.com
     gcp_workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+
+    # https://github.com/suzuki-shunsuke/tfaction/discussions/1325
+    gcp_access_token_scopes: 'https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/userinfo.email, https://www.googleapis.com/auth/apps.groups.settings, https://www.googleapis.com/auth/admin.directory.group'
   tfmigrate_plan_config:
     aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_gcp_tfmigrate_plan
     gcp_service_account: terraform@my-project.iam.gserviceaccount.com
     gcp_workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+
+    # https://github.com/suzuki-shunsuke/tfaction/discussions/1325
+    gcp_access_token_scopes: 'https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/userinfo.email, https://www.googleapis.com/auth/apps.groups.settings, https://www.googleapis.com/auth/admin.directory.group'
   terraform_apply_config:
     aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_gcp_terraform_apply
     gcp_service_account: terraform@my-project.iam.gserviceaccount.com
     gcp_workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+
+    # https://github.com/suzuki-shunsuke/tfaction/discussions/1325
+    gcp_access_token_scopes: 'https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/userinfo.email, https://www.googleapis.com/auth/apps.groups.settings, https://www.googleapis.com/auth/admin.directory.group'
   tfmigrate_apply_config:
     aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_gcp_tfmigrate_apply
     gcp_service_account: terraform@my-project.iam.gserviceaccount.com
     gcp_workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+
+    # https://github.com/suzuki-shunsuke/tfaction/discussions/1325
+    gcp_access_token_scopes: 'https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/userinfo.email, https://www.googleapis.com/auth/apps.groups.settings, https://www.googleapis.com/auth/admin.directory.group'
 ```
