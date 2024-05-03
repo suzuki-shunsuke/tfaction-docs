@@ -27,9 +27,9 @@ jobs:
       - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
         with:
           node-version: ${{steps.package_json.outputs.prop}}
-          cache: 'yarn'
-      - run: yarn install
-      - run: yarn build
+          cache: npm
+      - run: npm install
+      - run: npm run build
       - name: Generate token
         id: generate_token
         uses: tibdex/github-app-token@3beb63f4bd073e61482598c45c71c1019b59b73a # v2.1.0
