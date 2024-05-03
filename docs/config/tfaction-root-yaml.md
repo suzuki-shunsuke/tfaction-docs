@@ -184,6 +184,12 @@ target_groups:
     secret_name: FOO_STAGING # Secret name
 
   gcs_bucket_name_tfmigrate_history: '<Google Cloud Storage Bucket Name for tfmigrate history files>'
+
+  # Google Cloud Service Account for Terraform Backend.
+  # By default, gcp_service_account and gcp_workload_identity_provider are used.
+  gcp_remote_backend_service_account: terraform@my-project.iam.gserviceaccount.com
+  gcp_remote_backend_workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+
   terraform_plan_config:
     aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_gcp_terraform_plan
     gcp_service_account: terraform@my-project.iam.gserviceaccount.com
