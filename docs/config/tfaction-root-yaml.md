@@ -185,6 +185,7 @@ target_groups:
 
   gcs_bucket_name_tfmigrate_history: '<Google Cloud Storage Bucket Name for tfmigrate history files>'
 
+  # tfaction >= v1.5.0
   # Google Cloud Service Account for Terraform Backend.
   # By default, gcp_service_account and gcp_workload_identity_provider are used.
   gcp_remote_backend_service_account: terraform@my-project.iam.gserviceaccount.com

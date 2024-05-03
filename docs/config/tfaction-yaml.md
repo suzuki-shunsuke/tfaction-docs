@@ -28,6 +28,7 @@ aws_assume_role_arn:
 gcp_service_account:
 gcp_workload_identity_provider:
 
+# tfaction >= v1.5.0
 # Google Cloud Service Account for Terraform Backend.
 # By default, gcp_service_account and gcp_workload_identity_provider are used.
 gcp_remote_backend_service_account: terraform@my-project.iam.gserviceaccount.com
