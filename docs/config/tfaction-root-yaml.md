@@ -174,7 +174,16 @@ target_groups:
   target: gcp/
   aws_region: ap-northeast-1
   template_dir: templates/github
-  runs_on: ubuntu-latest # default is "ubuntu-latest". This is useful to use GitHub Actions Self Hosted Runner for the specific provider
+
+  # runs_on is GitHub Actions jobs' `runs-on`.
+  # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
+  # https://github.com/suzuki-shunsuke/tfaction-example/blob/b8a1740fb881ed8753dba8c76f5df521f1a71dde/.github/workflows/apply.yaml#L29
+  # The default value is "ubuntu-latest".
+  # Either a string or an array of strings.
+  # This is useful to use a GitHub Actions Self Hosted Runner for the specific provider
+  runs_on: ubuntu-latest
+  # runs_on: [self-hosted, linux, x64, gpu]
+
   environment: # default is null
     # https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
     name: production
