@@ -19,6 +19,21 @@ If any code fix is needed, please add commits to the created pull request and me
 Pull Requests are created per failed job.
 For example, if two jobs failed, two pull requests would be created.
 
+## .tfaction/failed-prs
+
+[#1799](https://github.com/suzuki-shunsuke/tfaction/issues/1799) [#1801](https://github.com/suzuki-shunsuke/tfaction/pull/1801)
+
+As of tfaction [v1.6.0](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v1.6.0), the behavior of this feature was changed.
+tfaction creates a file `.tfaction/failed-prs` in working directories to create follow up pull requests.
+
+e.g.
+
+```
+# This file is created and updated by tfaction for follow up pull requests.
+# You can remove this file safely.
+https://github.com/suzuki-shunsuke/terraform-example/pull/1
+```
+
 ## :bulb: Skip creating pull requests
 
 If you don't want to create pull requests by GitHub App, please see [Support skipping creating pull requests](skip-creating-pr.md).
