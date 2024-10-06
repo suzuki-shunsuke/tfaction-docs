@@ -42,6 +42,7 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
   - Detect the drift periodically and manage the drift as GitHub Issues
 - [Support Terraform compatible tools such as OpenTofu and Terragrunt](/tfaction/docs/feature/use-terraform-compatible-tool)
 - [Support running CI on working directories that depend on a updated local path Module](/tfaction/docs/feature/local-path-module)
+- [Generate code by `terraform plan -generate-config-out` to import resources](/tfaction/docs/feature/generate-config-out)
 
 [Dynamic build matrix for Monorepo](/tfaction/docs/feature/build-matrix)
 
@@ -134,10 +135,6 @@ Please see [here](https://github.com/suzuki-shunsuke/tfaction#who-uses-tfaction)
 ## Release Notes
 
 https://github.com/suzuki-shunsuke/tfaction/releases
-
-## Versioning Policy
-
-[suzuki-shunsuke/versioning-policy v0.1.0](https://github.com/suzuki-shunsuke/versioning-policy/blob/v0.1.0/POLICY.md), which is compatible with [Semantic Versioning 2.0.0](https://semver.org/).
 
 ## LICENSE
 
