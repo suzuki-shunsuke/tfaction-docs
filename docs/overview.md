@@ -43,6 +43,7 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
 - [Support Terraform compatible tools such as OpenTofu and Terragrunt](/tfaction/docs/feature/use-terraform-compatible-tool)
 - [Support running CI on working directories that depend on a updated local path Module](/tfaction/docs/feature/local-path-module)
 - [Generate code by `terraform plan -generate-config-out` to import resources](/tfaction/docs/feature/generate-config-out)
+- [Generate document by terraform-docs](/tfaction/docs/feature/terraform-docs)
 
 [Dynamic build matrix for Monorepo](/tfaction/docs/feature/build-matrix)
 
