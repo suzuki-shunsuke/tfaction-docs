@@ -2,15 +2,18 @@
 sidebar_position: 600
 ---
 
-# Validate Terraform Plan Result with Conftest
+# Conftest
+
+:::info
+Conftest support was improved at tfaction [v1.8.0](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v1.8.0).
+:::
 
 About Conftest, please see https://www.conftest.dev/ .
 
 https://www.openpolicyagent.org/docs/latest/terraform/
 
-tfaction supports validating Terraform Plan Result with Conftest.
-
-If Terraform Plan Result violate your Conftest Policy, the violation is notified as Pull Request Comment.
+tfaction supports validating files using Conftest.
+Any violation is notified as pull request comment.
 
 ![image](https://user-images.githubusercontent.com/13323303/150035710-249c4cbd-47fa-46d7-ae0d-28ab4ace1a64.png)
 
@@ -19,7 +22,6 @@ tfaction doesn't provide any Conftest Policy. Please write your Conftest Policy 
 We recommend writing the document about Conftest Policy per policy.
 
 ```
-github-comment.yaml
 policy/
   github_issue_label_description.rego # Policy
   github_issue_label_description_test.rego # Policy Test
@@ -28,18 +30,128 @@ policy/
 
 ![image](https://user-images.githubusercontent.com/13323303/150035773-1702fba7-5058-412f-b41c-f69793237dd7.png)
 
-## Policy directory
+## Settings
 
-tfaction >= v1.1.0
+By default, tfaction runs Conftest if the directory `policy` exists in the repository root directory.
 
-You can change the directory by the setting `conftest_policy_directory` in tfaction-root.yaml.
+### conftest_policy_directory
 
-e.g. tfaction-root.yaml
+tfaction >= [v1.1.0](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v1.1.0):
+
+You can change the directory by the setting `conftest_policy_directory` in `tfaction-root.yaml`.
 
 ```yaml
 conftest_policy_directory: terraform/policy
 ```
 
-The default value is "policy".
-If `conftest_policy_directory` isn't set and the directory policy doesn't exist, contest is skipped.
-If `conftest_policy_directory` is set but the directory doesn't exist, the action fails.
+:::info
+If you configure the `conftest` field, `conftest_policy_directory` is ignored.
+You should migrate `conftest_policy_directory` to `conftest`.
+
+```yaml
+conftest:
+  - policy: terraform/policy
+    plan: true
+```
+
+:::
+
+### conftest
+
+tfaction >= [v1.8.0](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v1.8.0):
+
+You can configure policies at three layers.
+
+1. tfaction.yaml
+1. target_group in tfaction-root.yaml
+1. root in tfaction-root.yaml
+
+tfaction-root.yaml:
+
+```yaml
+conftest:
+  policies:
+    - policy: policy/plan
+      plan: true
+      id: plan
+target_groups:
+  - working_directory: aws/
+    # ...
+    conftest:
+      disable_all: true
+      # ...
+```
+
+tfaction.yaml:
+
+```yaml
+conftest:
+  policies:
+    - id: plan
+      enabled: false
+    - policy: policy/combine/tf
+      tf: true
+      combine: true
+      data: data
+```
+
+Basically, tfaction joins `conftest.policies` and runs `conftest test` by policy.
+Using `id` field, you can also overwrite the existing policy.
+
+`contest`:
+
+- `disable_all`: Boolean. If this is true, settings in previous layers are disabled
+- `policies`: A list of policies
+
+`conftest.policies[]`:
+
+- `policy`: A relative path to a policy directory from the repository root directory
+- `id`: unique id of policy. This is optional. This is used to overwrite the setting
+- `data`: conftest test's -data option. A relative path to a data directory from the repository root directory
+- `plan`: boolean. Whether this policy is for plan files. The default is false
+- `tf`: boolean. Whether this policy is for *.tf and *.tf.json. The default is false
+- `combine`: boolean. conftest test's -combine option. The default is false
+- `enabled`: boolean. Whether this policy is enabled. The default is true
+- `paths`: A list of tested file paths. [glob](https://www.npmjs.com/package/glob) is available.
+
+## Example
+
+```yaml
+conftest:
+  policies:
+    - policy: policy/tf
+      id: tf
+      tf: true
+    - policy: policy/combine/tf
+      combine: true
+      tf: true
+    - policy: policy/plan
+      plan: true
+    - policy: policy/tfaction
+      paths:
+        - tfaction.yaml
+    - policy: policy/json
+      paths:
+        - "*.json"
+```
+
+`disable_all`:
+
+```yaml
+conftest:
+  disable_all: true # Disable settings of previous layers
+  policies:
+    - policy: policy/tf
+      tf: true
+```
+
+`enabled: false`: Disable specific policies.
+
+```yaml
+conftest:
+  policies:
+    - id: tf
+      enabled: false
+    - policy: policy/plan
+      plan: true
+```
