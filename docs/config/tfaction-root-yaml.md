@@ -119,6 +119,12 @@ drift_detection:
 
 terraform_command: terraform
 
+# tfaction >= v1.8.0
+conftest:
+  policies:
+    - policy: policy/plan
+      plan: true
+
 target_groups:
 - working_directory: aws/
   target: aws/
