@@ -64,7 +64,7 @@ working_directory_file: tfaction.yaml # default is "tfaction.yaml"
 # conftest_policy_directory: tfaction >= v1.1.0
 # conftest_policy_directory is the file path to the conftest policy directory.
 # The default value is "policy".
-# If conftest_policy_directory isn't set and the directory policy doesn't exist, contest is skipped.
+# If conftest_policy_directory isn't set and the directory policy doesn't exist, conftest is skipped.
 # If conftest_policy_directory is set but the directory doesn't exist, the action fails.
 conftest_policy_directory: terraform/policy
 
