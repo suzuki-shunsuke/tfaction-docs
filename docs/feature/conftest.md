@@ -105,14 +105,52 @@ Using `id` field, you can also overwrite the existing policy.
 
 `conftest.policies[]`:
 
-- `policy`: A relative path to a policy directory from the repository root directory
-- `id`: unique id of policy. This is optional. This is used to overwrite the setting
-- `data`: conftest test's -data option. A relative path to a data directory from the repository root directory
-- `plan`: boolean. Whether this policy is for plan files. The default is false
-- `tf`: boolean. Whether this policy is for *.tf and *.tf.json. The default is false
-- `combine`: boolean. conftest test's -combine option. The default is false
-- `enabled`: boolean. Whether this policy is enabled. The default is true
+- tfaction specific options:
+  - `id`: unique id of policy. This is optional. This is used to overwrite the setting
+  - `plan`: boolean. Whether this policy is for plan files. The default is false
+  - `tf`: boolean. Whether this policy is for *.tf and *.tf.json. The default is false
+  - `enabled`: boolean. Whether this policy is enabled. The default is true
+- conftest options:
+  - `policy`: A list or a string of relative paths to a policy directory from the repository root directory
+  - `data`: A list or a string of conftest test's `-data` option. A relative path to a data directory from the repository root directory
+  - `combine`: boolean. conftest test's `-combine` option. The default is `false`
+  - `fail_on_warn`: boolean. conftest test's `-fail-on-warn` option. The default is `false`
+  - `no_fail`: boolean. conftest test's `-no-fail` option. The default is `false`
+  - `all_namespaces`: boolean. conftest test's `-all-namespaces` option. The default is `false`
+  - `quiet`: boolean. conftest test's `-quiet` option. The default is `false`
+  - `trace`: boolean. conftest test's `-trace` option. The default is `false`
+  - `strict`: boolean. conftest test's `-strict` option. The default is `false`
+  - `show_builtin_errors`: boolean. conftest test's `-show-builtin-errors` option. The default is `false`
+  - `junit_hide_message`: boolean. conftest test's `-junit-hide-message` option. The default is `false`
+  - `suppress_exceptions`: boolean. conftest test's `-suppress-exceptions` option. The default is `false`
+  - `tls`: boolean. conftest test's `-tls` option. The default is `false`
+  - `parser`: string. conftest test's `-parser` option
+  - `output`: string. conftest test's `-output` option
+  - `namespaces`: A list of strings. conftest test's `-namespace` option
 - `paths`: A list of tested file paths. [glob](https://www.npmjs.com/package/glob) is available.
+
+```yaml
+conftest:
+  policies:
+    - policy: # array or string
+        - policy/terraform
+      data: # array or string
+        - data/data.yaml
+      fail_on_warn: true
+      no_fail: true
+      all_namespaces: true
+      quiet: true
+      trace: true
+      strict: true
+      show_builtin_errors: true
+      junit_hide_message: true
+      suppress_exceptions: true
+      tls: true
+      parser: hcl
+      output: json
+      namespaces:
+        - main
+```
 
 ## Example
 
