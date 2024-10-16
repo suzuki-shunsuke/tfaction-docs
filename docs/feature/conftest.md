@@ -98,7 +98,7 @@ conftest:
 Basically, tfaction joins `conftest.policies` and runs `conftest test` by policy.
 Using `id` field, you can also overwrite the existing policy.
 
-`contest`:
+`conftest`:
 
 - `disable_all`: Boolean. If this is true, settings in previous layers are disabled
 - `policies`: A list of policies
