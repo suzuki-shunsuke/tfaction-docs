@@ -152,6 +152,22 @@ conftest:
         - main
 ```
 
+## Refer `target` and `working_directory` in policies by `-data` option
+
+[v1.10.0](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v1.9.0) [#1914](https://github.com/suzuki-shunsuke/tfaction/pull/1914)
+
+tfaction creates a special data file temporarily and pass it to your policies by [--data option](https://www.conftest.dev/options/#-data).
+The data file includes `target` and `working_directory`, so you can refer them in policies.
+
+e.g.
+
+```rego
+import data.tfaction
+
+target := tfaction.target
+working_directory := tfaction.working_directory
+```
+
 ## Example
 
 ```yaml
