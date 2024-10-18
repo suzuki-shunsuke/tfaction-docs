@@ -41,6 +41,21 @@ env:
 secrets:
 terraform_plan_config:
   aws_assume_role_arn: arn:aws:iam::000000000000:role/GitHubActions_Terraform_AWS_terraform_plan
+
+  # AWS IAM Role Session Name
+  # tfaction >= v1.11.0
+  # This is optional.
+  # The maximum length of the session name is 64.
+  # And it must satisfy regular expression pattern `[\w+=,.@-]*`.
+  # The default value of session name is
+  # 1. tfaction-{plan or apply}-{normalized target}-${GitHub Actions Run ID}
+  # 2. tfaction-{plan or apply}-{normalized target}
+  # 3. tfaction-{plan or apply}-${GitHub Actions Run ID}
+  # 4. tfaction-{plan or apply}
+  # / in the default targets are converted to `_`.
+  # And if target is too long, it is removed from the default session name.
+  aws_role_session_name: tfplan
+
   env:
     # Environment variables
     FOO: foo
