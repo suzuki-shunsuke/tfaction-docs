@@ -45,7 +45,7 @@ terraform_plan_config:
   # AWS IAM Role Session Name
   # tfaction >= v1.11.0
   # This is optional.
-  # The maximum length of the sesion name is 64.
+  # The maximum length of the session name is 64.
   # And it must satisfy regular expression pattern `[\w+=,.@-]*`.
   # The default value of session name is
   # 1. tfaction-{plan or apply}-{normalized target}-${GitHub Actions Run ID}
