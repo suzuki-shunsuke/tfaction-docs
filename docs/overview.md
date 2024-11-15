@@ -117,6 +117,41 @@ CI fails if there are changes, which enables you to merge pull requests without 
 
 ![image](https://user-images.githubusercontent.com/13323303/233079963-68765f2e-1efd-4278-b6c3-145eae9ef9c0.png)
 
+## Available versions
+
+> [!CAUTION]
+> We don't add `*/dist/*.js` in the main branch and feature branches.
+> So you can't specify `main` and feature branches as versions.
+>
+> ```yaml
+> # This never works as setup/dist/index.js doesn't exist.
+> uses: suzuki-shunsuke/tfaction/setup@main
+> ```
+
+The following versions are available.
+
+1. [Release versions](https://github.com/suzuki-shunsuke/tfaction/releases)
+
+```yaml
+uses: suzuki-shunsuke/tfaction/setup@v1.12.1
+```
+
+2. [Pull Request versions](https://github.com/suzuki-shunsuke/tfaction/branches/all?query=pr%2F&lastTab=overview): These versions are removed when we feel unnecessary. These versions are used to test pull requests.
+
+```yaml
+uses: suzuki-shunsuke/tfaction/setup@pr/2017
+```
+
+3. [latest branch](https://github.com/suzuki-shunsuke/tfaction/tree/latest): [This branch is built by CI when the main branch is updated](https://github.com/suzuki-shunsuke/tfaction/blob/latest/.github/workflows/main.yaml). Note that we push commits to the latest branch forcibly.
+
+```yaml
+uses: suzuki-shunsuke/tfaction/setup@latest
+```
+
+Pull Request versions and the latest branch are unstable.
+These versions are for testing.
+You should use [release versions](https://github.com/suzuki-shunsuke/tfaction/releases) in production.
+
 ## Who uses tfaction?
 
 Please see [here](https://github.com/suzuki-shunsuke/tfaction#who-uses-tfaction).
