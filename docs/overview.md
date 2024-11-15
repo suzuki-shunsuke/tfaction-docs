@@ -119,14 +119,15 @@ CI fails if there are changes, which enables you to merge pull requests without 
 
 ## Available versions
 
-> [!CAUTION]
-> We don't add `*/dist/*.js` in the main branch and feature branches.
-> So you can't specify `main` and feature branches as versions.
->
-> ```yaml
-> # This never works as setup/dist/index.js doesn't exist.
-> uses: suzuki-shunsuke/tfaction/setup@main
-> ```
+:::caution
+We don't add `*/dist/*.js` in the main branch and feature branches anymore.
+So you can't specify `main` and feature branches as versions.
+
+```yaml
+# This never works as setup/dist/index.js doesn't exist.
+uses: suzuki-shunsuke/tfaction/setup@main
+```
+:::
 
 The following versions are available.
 
