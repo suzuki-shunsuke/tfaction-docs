@@ -49,6 +49,23 @@ tfaction runs [tflint](https://github.com/terraform-linters/tflint) and notifies
 
 ![image](https://user-images.githubusercontent.com/13323303/153742833-403ea6c5-a780-4d2a-a30c-3a481c0971b1.png)
 
+### Fix code by `tflint --fix`
+
+[#2104](https://github.com/suzuki-shunsuke/tfaction/pull/2104) tfaction >= v1.13.0, tflint >= [v0.47.0](https://github.com/terraform-linters/tflint/releases/tag/v0.47.0)
+
+Codes are fixed by `tflint --fix` and a commit is pushed to the feature branch.
+
+![image](https://storage.googleapis.com/zenn-user-upload/b83113fcc2e0-20241215.png)
+
+By default, this feature is disabled.
+You can enable this by tfaction-root.yaml.
+
+```yaml
+tflint:
+  enabled: true
+  fix: true # Enable `tflint --fix`
+```
+
 ## tfsec
 
 tfaction runs [tfsec](https://github.com/aquasecurity/tfsec) and notifies the result.
