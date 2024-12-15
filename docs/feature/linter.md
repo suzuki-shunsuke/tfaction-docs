@@ -53,16 +53,17 @@ tfaction runs [tflint](https://github.com/terraform-linters/tflint) and notifies
 
 [#2104](https://github.com/suzuki-shunsuke/tfaction/pull/2104) tfaction >= v1.13.0, tflint >= [v0.47.0](https://github.com/terraform-linters/tflint/releases/tag/v0.47.0)
 
-By default, codes are fixed by `tflint --fix` and fixes are pushed to the feature branch.
+Codes are fixed by `tflint --fix` and a commit is pushed to the feature branch.
 
 ![image](https://storage.googleapis.com/zenn-user-upload/b83113fcc2e0-20241215.png)
 
-You can disable this by tfaction-root.yaml.
+By default, this feature is disabled.
+You can enable this by tfaction-root.yaml.
 
 ```yaml
 tflint:
   enabled: true
-  fix: false # Disable `tflint --fix`
+  fix: true # Enable `tflint --fix`
 ```
 
 ## tfsec

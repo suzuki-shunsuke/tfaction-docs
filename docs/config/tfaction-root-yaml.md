@@ -97,7 +97,7 @@ env:
 #   enabled: true
 # tflint:
 #   enabled: true
-#   fix: false # tfaction >= v1.13.0
+#   fix: true # tfaction >= v1.13.0
 # trivy:
 #   enabled: false
 
