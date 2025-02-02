@@ -1,16 +1,13 @@
 ---
 name: test
-
 on: pull_request
-
 permissions: {}
 env:
   AQUA_LOG_COLOR: always
-
 jobs:
   path-filter:
     # Get changed files to filter jobs
-    timeout-minutes: 30
+    timeout-minutes: 10
     outputs:
       update-aqua-checksums: ${{steps.changes.outputs.update-aqua-checksums}}
       renovate-config-validator: ${{steps.changes.outputs.renovate-config-validator}}
@@ -33,32 +30,10 @@ jobs:
               - .github/workflows/*.yaml
               - aqua/imports/ghalint.yaml
 
-  enable-automerge:
-    # Enable automerge to merge pull requests from Renovate automatically.
-    timeout-minutes: 30
-    runs-on: ubuntu-latest
-    needs:
-      - status-check
-    permissions:
-      contents: write # For enable automerge
-      pull-requests: write # For enable automerge
-    # "! failure() && ! cancelled()" is required. success() returns false if dependent jobs are skipped.
-    # https://github.com/community/community/discussions/45058
-    # By default success() is used so we have to override success() by "! failure() && ! cancelled()"
-    if: |
-      ! failure() && ! cancelled() && github.event.pull_request.user.login == 'renovate[bot]' && contains(github.event.pull_request.body, ' **Automerge**: Enabled.')
-    steps:
-      - uses: suzuki-shunsuke/enable-auto-merge-action@ec074392e76cd1062925255cd82a86ea1c44b6fd # v0.1.0
-        with:
-          pr_number: ${{github.event.pull_request.number}}
-          merge_method: squash
-          github_app_id: ${{secrets.APP_ID}}
-          github_app_private_key: ${{secrets.APP_PRIVATE_KEY}}
-
   status-check:
     # This job is used for main branch's branch protection rule's status check.
     # If all dependent jobs succeed or are skipped this job succeeds.
-    timeout-minutes: 30
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     needs:
       - renovate-config-validator
@@ -103,7 +78,7 @@ jobs:
 
   ghalint:
     # Validate GitHub Actions Workflows by ghalint.
-    timeout-minutes: 30
+    timeout-minutes: 10
     needs: path-filter
     if: needs.path-filter.outputs.ghalint == 'true'
     runs-on: ubuntu-latest
@@ -122,7 +97,7 @@ jobs:
           GHALINT_LOG_COLOR: always
 
   typos:
-    timeout-minutes: 30
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     permissions: {}
     steps:
