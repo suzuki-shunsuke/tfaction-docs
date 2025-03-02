@@ -30,7 +30,7 @@ Using Renovate and our Renovate Config Preset, you can automate the update:
 ```json
 {
   "extends": [
-    "github>suzuki-shunsuke/renovate-config:yaml-language-server#3.0.0"
+    "github>suzuki-shunsuke/renovate-config:yaml-language-server#3.1.0"
   ]
 }
 ```
