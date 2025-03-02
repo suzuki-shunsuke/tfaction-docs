@@ -4,8 +4,36 @@ sidebar_position: 200
 
 # tfaction-root.yaml
 
-* [JSON Schema](https://github.com/suzuki-shunsuke/tfaction/blob/main/schema/tfaction-root.json)
-* [Generated document from JSON Schema](https://suzuki-shunsuke.github.io/tfaction/config/tfaction-root.html)
+## JSON Schema
+
+- [JSON Schema](https://github.com/suzuki-shunsuke/tfaction/blob/latest/schema/tfaction-root.json)
+- [Generated document from JSON Schema](https://suzuki-shunsuke.github.io/tfaction/config/tfaction-root.html)
+
+### 💡 Input Complementation by YAML Language Server
+
+Add a code comment to tfaction-root.yaml:
+
+```yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/tfaction/refs/heads/latest/schema/tfaction-root.json
+```
+
+If you specify a branch like `latest` as version, editors can't reflect the update of JSON Schema well as they cache JSON Schema.
+You would need to do something like reopening the file.
+So it's good to specify semver and update it periodically.
+
+```yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/tfaction/refs/tags/v1.15.5/schema/tfaction-root.json
+```
+
+Using Renovate and our Renovate Config Preset, you can automate the update:
+
+```json
+{
+  "extends": [
+    "github>suzuki-shunsuke/renovate-config:yaml-language-server#3.1.0"
+  ]
+}
+```
 
 ## `plan_workflow_name`
 
