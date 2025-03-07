@@ -6,6 +6,15 @@ env:
   AQUA_LOG_COLOR: always
 jobs:
   status-check:
+    runs-on: ubuntu-24.04
+    if: failure()
+    timeout-minutes: 10
+    permissions: {}
+    needs:
+      - test
+    steps:
+      - run: exit 1
+  test:
     uses: ./.github/workflows/wc-deploy.yaml
     permissions:
       contents: write
