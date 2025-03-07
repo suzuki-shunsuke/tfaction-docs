@@ -1,0 +1,13 @@
+---
+# Separate the workflow for actionlint to other workflows, because if a workflow for actionlint is broken actionlint isn't run
+name: renovate-config-validator
+on:
+  pull_request:
+    paths:
+      - renovate.json5
+      - .github/workflows/renovate-config-vdalidator.yaml
+jobs:
+  status-check:
+    uses: suzuki-shunsuke/renovate-config-validator-workflow/.github/workflows/validate.yaml@e8effbd185cbe3874cddef63f48b8bdcfc9ada55 # v0.2.4
+    permissions:
+      contents: read

@@ -10,7 +10,6 @@ on:
         required: false
       private_key:
         required: false
-
 jobs:
   deploy:
     timeout-minutes: 30
