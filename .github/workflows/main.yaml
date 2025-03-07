@@ -1,10 +1,8 @@
 ---
 name: main
-
 on:
   push:
     branches: [main]
-
 jobs:
   deploy:
     uses: ./.github/workflows/wc-deploy.yaml

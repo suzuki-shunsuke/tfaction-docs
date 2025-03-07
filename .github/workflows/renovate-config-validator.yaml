@@ -1,12 +1,11 @@
 ---
 # Separate the workflow for actionlint to other workflows, because if a workflow for actionlint is broken actionlint isn't run
-name: actionlint
+name: renovate-config-validator
 on:
   pull_request:
     paths:
-      - .github/workflows/*.yaml
-      - aqua/imports/actionlint.yaml
-      - aqua/imports/reviewdog.yaml
+      - renovate.json5
+      - .github/workflows/renovate-config-vdalidator.yaml
 jobs:
   status-check:
     runs-on: ubuntu-24.04
@@ -14,13 +13,10 @@ jobs:
     timeout-minutes: 10
     permissions: {}
     needs:
-      - actionlint
+      - renovate-config-validator
     steps:
       - run: exit 1
-  actionlint:
-    uses: suzuki-shunsuke/actionlint-workflow/.github/workflows/actionlint.yaml@932d2dbef166b2f6f7e11790954e8245289ffd0d # v1.2.1
-    with:
-      aqua_version: v2.45.0
+  renovate-config-validator:
+    uses: suzuki-shunsuke/renovate-config-validator-workflow/.github/workflows/validate.yaml@e8effbd185cbe3874cddef63f48b8bdcfc9ada55 # v0.2.4
     permissions:
-      pull-requests: write
       contents: read
