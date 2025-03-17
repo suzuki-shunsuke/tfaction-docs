@@ -89,6 +89,12 @@ draft_pr: true # default is false. If `draft_pr` is true, tfaction creates pull 
 base_working_directory: "" # default is empty, which means the current directory
 working_directory_file: tfaction.yaml # default is "tfaction.yaml"
 
+# tfaction v1.16.0
+# https://github.com/suzuki-shunsuke/tfaction/pull/2431
+follow_up_pr_group_label:
+  enabled: true # The default is false
+  prefix: "tfaction:follow-up-pr-group/"
+
 # conftest_policy_directory: tfaction >= v1.1.0
 # conftest_policy_directory is the file path to the conftest policy directory.
 # The default value is "policy".
