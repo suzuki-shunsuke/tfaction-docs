@@ -125,7 +125,7 @@ Issues will be reopened when the drift will be detected.
 
 ```yaml
 drift_detection:
-  num_of_issues: 1 # The maxmum number of issues that scheduled job handles. The default value is `1`
+  num_of_issues: 1 # The maximum number of issues that scheduled job handles. The default value is `1`
   minimum_detection_interval: 1 # The default value is 168 (7 days). The scheduled workflow picks out working directories whose issues were updated before `minimum_detection_interval` hours
 ```
 
