@@ -1,11 +1,11 @@
 ---
 name: typos
-on: pull_request
+on: workflow_call
 permissions: {}
 env:
   AQUA_LOG_COLOR: always
 jobs:
-  status-check:
+  typos:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     permissions: {}

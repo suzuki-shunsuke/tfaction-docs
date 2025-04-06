@@ -15,8 +15,6 @@ jobs:
     steps:
       - run: exit 1
   test:
-    uses: ./.github/workflows/wc-deploy.yaml
+    uses: ./.github/workflows/workflow_call_test.yaml
     permissions:
-      contents: write
-    with:
-      is_pr: true
+      contents: read
