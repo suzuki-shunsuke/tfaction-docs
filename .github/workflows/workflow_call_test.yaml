@@ -1,0 +1,20 @@
+---
+name: test (workflow_call)
+on: workflow_call
+permissions: {}
+env:
+  AQUA_LOG_COLOR: always
+jobs:
+  test:
+    uses: ./.github/workflows/wc-deploy.yaml
+    permissions: {}
+  typos:
+    uses: ./.github/workflows/typos.yaml
+    permissions: {}
+  renovate-config-validator:
+    uses: ./.github/workflows/renovate-config-validator.yaml
+    permissions:
+      contents: read
+  ghalint:
+    uses: ./.github/workflows/ghalint.yaml
+    permissions: {}
