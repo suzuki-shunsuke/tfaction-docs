@@ -121,6 +121,12 @@ aqua:
 update_local_path_module_caller:
   enabled: true
 
+# tfaction >= v1.17.0
+# https://github.com/suzuki-shunsuke/tfaction/pull/2744
+limit_changed_dirs:
+  working_dirs: 5 # The maximum number of changed working directories in one pull request. By default, there is no limit
+  modules: 5 # The maximum number of changed modules in one pull request. By default, there is no limit
+
 env:
   # Environment variables
   # <environment variable name>: <value>
