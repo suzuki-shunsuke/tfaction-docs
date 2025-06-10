@@ -2,7 +2,7 @@
 sidebar_position: 70
 ---
 
-# Notify the result of terraform plan and apply with tfcmt
+# PR comment by tfcmt
 
 ![image](https://user-images.githubusercontent.com/13323303/147400233-8b9411d6-0255-4c36-9e9f-35e44223c979.png)
 

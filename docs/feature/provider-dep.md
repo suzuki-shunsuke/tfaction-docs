@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1210
+description: Output provider versions for troubleshooting
 ---
 
-# Check provider version constraint for troubleshooting
+# Output providers for troubleshooting
 
 [#2256](https://github.com/suzuki-shunsuke/tfaction/pulls/2256) [v1.15.2](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v1.15.2)
 

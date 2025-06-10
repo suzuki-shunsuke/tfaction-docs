@@ -2,7 +2,7 @@
 sidebar_position: 150
 ---
 
-# Create a pull request automatically to handle the problem when apply failed
+# Follow-up pull requests
 
 Sometimes `terraform apply` fails even if `terraform plan` passed.
 In that case, tfaction automatically creates a pull request with an empty commit to fix the failure.

@@ -2,7 +2,7 @@
 sidebar_position: 80
 ---
 
-# Apply safely with Terraform Plan File
+# Safe Apply with Plan File
 
 Apply safely with Terraform Plan file created by Pull Request.
 

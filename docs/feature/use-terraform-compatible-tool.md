@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1110
+description: Support tools like OpenTofu and Terragrunt
 ---
 
 # Use a Terraform compatible tool

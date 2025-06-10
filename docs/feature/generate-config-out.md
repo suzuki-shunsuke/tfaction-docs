@@ -2,7 +2,7 @@
 sidebar_position: 1130
 ---
 
-# Generate code by `terraform plan -generate-config-out`
+# terraform plan -generate-config-out
 
 [#1860](https://github.com/suzuki-shunsuke/tfaction/issues/1860) [#1870](https://github.com/suzuki-shunsuke/tfaction/pulls/1870) [v1.7.0](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v1.7.0)
 

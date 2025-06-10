@@ -1,8 +1,9 @@
 ---
 sidebar_position: 700
+description: Skip terraform for some dependency update
 ---
 
-# Support skipping `terraform plan` and `terraform apply` in case of pull request by Renovate
+# Skip terraform for Renovate
 
 [#151](https://github.com/suzuki-shunsuke/tfaction/issues/151) [#153](https://github.com/suzuki-shunsuke/tfaction/issues/153)
 

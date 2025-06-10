@@ -94,6 +94,21 @@ const config = {
         //... other Algolia params
       },
     }),
+
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          // /docs/oldDoc -> /docs/newDoc
+          {
+            from: '/codes/001',
+            to: '/feature/limit-changed-dirs',
+          },
+        ],
+      },
+    ],
+  ],
 };
 
 module.exports = config;
