@@ -2,7 +2,7 @@
 sidebar_position: 1000
 ---
 
-# Support skipping creating pull requests
+# Skip creating pull requests
 
 [#202](https://github.com/suzuki-shunsuke/tfaction/issues/202)
 

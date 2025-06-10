@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1120
+description: Dependency resolution of local-path Module
 ---
 
-# Run CI on working directories that depend on a updated local path Module
+# local-path Module
 
 tfaction >= v1.3.0 [#1528](https://github.com/suzuki-shunsuke/tfaction/pull/1528)
 

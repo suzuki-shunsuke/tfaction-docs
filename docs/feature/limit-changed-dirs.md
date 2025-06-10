@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1230
+description: Limit the number of changed directories in one pull request
 ---
 
-# Limit the number of changed directories in one pull request
+# Limit changed directories
 
 `tfaction >= v1.17.0`, [#2744](https://github.com/suzuki-shunsuke/tfaction/pull/2744)
 

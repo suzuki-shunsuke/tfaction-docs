@@ -2,7 +2,7 @@
 sidebar_position: 1130
 ---
 
-# Generate document using `terraform-docs`
+# terraform-docs
 
 [#1859](https://github.com/suzuki-shunsuke/tfaction/issues/1859) [#1878](https://github.com/suzuki-shunsuke/tfaction/pulls/1878) [v1.8.0](https://github.com/suzuki-shunsuke/tfaction/releases/tag/v1.8.0)
 

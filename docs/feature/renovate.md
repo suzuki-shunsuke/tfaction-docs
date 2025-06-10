@@ -2,7 +2,7 @@
 sidebar_position: 300
 ---
 
-# Update dependencies with Renovate safely
+# Safe update by Renovate
 
 We assume that tools are updated by Renovate Automatically.
 To decrease the burden, it is ideal that almost pull requests are merged automatically.

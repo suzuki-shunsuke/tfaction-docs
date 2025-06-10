@@ -2,7 +2,7 @@
 sidebar_position: 100
 ---
 
-# Automatically update related pull requests when the remote state is updated
+# Automatic update branches
 
 When `terraform plan` or `tfmigrate plan` is run in target `A`,
 tfaction sets a pull request label `A`.

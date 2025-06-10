@@ -2,7 +2,7 @@
 sidebar_position: 50
 ---
 
-# Support Monorepo with GitHub Actions build matrix
+# Monorepo Support
 
 tfaction supports Monorepo, which has multiple working directories in the same repository.
 

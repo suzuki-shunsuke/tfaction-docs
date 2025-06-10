@@ -2,7 +2,7 @@
 sidebar_position: 800
 ---
 
-# Auto Fix .terraform.lock.hcl and Terraform Configuration
+# Auto Fix
 
 * [suzuki-shunsuke/github-action-terraform-init](https://github.com/suzuki-shunsuke/github-action-terraform-init)
 * [suzuki-shunsuke/github-action-terraform-fmt](https://github.com/suzuki-shunsuke/github-action-terraform-fmt)

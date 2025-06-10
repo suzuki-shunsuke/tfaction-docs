@@ -1,8 +1,9 @@
 ---
 sidebar_position: 350
+description: Scaffold working directory by workflow_dispatch
 ---
 
-# Scaffold working directory by GitHub Actions `workflow_dispatch` event
+# Scaffold working directory
 
 When you add a new working directory, you can scaffold the directory by GitHub Actions.
 tfaction provides a workflow for it.
