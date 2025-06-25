@@ -44,8 +44,9 @@ You don't have to run `terraform apply` in your laptop, and don't have to reinve
 - [Support running CI on working directories that depend on a updated local path Module](/tfaction/docs/feature/local-path-module)
 - [Generate code by `terraform plan -generate-config-out` to import resources](/tfaction/docs/feature/generate-config-out)
 - [Generate document by terraform-docs](/tfaction/docs/feature/terraform-docs)
+- [Securefix Action](feature/securefix-action.md)
 
-[Dynamic build matrix for Monorepo](/tfaction/docs/feature/build-matrix)
+[Dynamic build matrix for Monorepo](feature/build-matrix.md)
 
 ![image](https://user-images.githubusercontent.com/13323303/151699474-b6cf9927-a0d1-4eb7-85fd-19504432362c.png)
 
