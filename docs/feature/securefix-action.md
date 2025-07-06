@@ -15,7 +15,7 @@ For more details, please see the document of Securefix Action.
 
 ## Requirements
 
-Securefix Action v0.2.0 is required.
+Securefix Action v0.1.1 or newer is required.
 [Please set up Securefix Action according to the document.](https://github.com/csm-actions/securefix-action)
 
 ## How to use
@@ -36,26 +36,35 @@ securefix:
   id: setup
   with:
     github_token: ${{steps.token.outputs.token}}
-    github_app_id_for_securefix_action: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
-    github_app_private_key_for_securefix_action: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
+    securefix_action_app_id: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
+    securefix_action_app_private_key: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
 - uses: suzuki-shunsuke/tfaction/test@latest
   with:
     github_token: ${{steps.token.outputs.token}}
-    github_app_id_for_securefix_action: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
-    github_app_private_key_for_securefix_action: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
+    securefix_action_app_id: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
+    securefix_action_app_private_key: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
 - uses: suzuki-shunsuke/tfaction/plan@latest
   with:
     github_token: ${{steps.token.outputs.token}}
-    github_app_id_for_securefix_action: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
-    github_app_private_key_for_securefix_action: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
+    securefix_action_app_id: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
+    securefix_action_app_private_key: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
+```
+
+```yaml
+- uses: suzuki-shunsuke/tfaction/create-follow-up-pr@latest
+  if: failure()
+  with:
+    github_token: ${{steps.token.outputs.token}}
+    securefix_action_app_id: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
+    securefix_action_app_private_key: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
 ```
 
 ```yaml
 - uses: suzuki-shunsuke/tfaction/create-scaffold-pr@latest
   with:
     github_token: ${{steps.token.outputs.token}}
-    github_app_id_for_securefix_action: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
-    github_app_private_key_for_securefix_action: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
+    securefix_action_app_id: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
+    securefix_action_app_private_key: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
 ```
 
 ```yaml
@@ -63,16 +72,16 @@ securefix:
   with:
     github_token: ${{steps.token.outputs.token}}
     migration_name: ${{inputs.migration_name}}
-    github_app_id_for_securefix_action: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
-    github_app_private_key_for_securefix_action: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
+    securefix_action_app_id: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
+    securefix_action_app_private_key: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
 ```
 
 ```yaml
 - uses: suzuki-shunsuke/tfaction/create-scaffold-module-pr@latest
   with:
     github_token: ${{steps.token.outputs.token}}
-    github_app_id_for_securefix_action: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
-    github_app_private_key_for_securefix_action: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
+    securefix_action_app_id: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
+    securefix_action_app_private_key: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
 ```
 
 ```yaml
@@ -83,8 +92,8 @@ securefix:
     github_token: ${{steps.token.outputs.token}}
     branch: ${{inputs.branch}}
     file: ${{inputs.file}}
-    github_app_id_for_securefix_action: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
-    github_app_private_key_for_securefix_action: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
+    securefix_action_app_id: ${{vars.SECUREFIX_ACTION_CLIENT_APP_ID}}
+    securefix_action_app_private_key: ${{secrets.SECUREFIX_ACTION_CLIENT_APP_PRIVATE_KEY}}
 ```
 
 3. Configuration of Securefix Action Server
