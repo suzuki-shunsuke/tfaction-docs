@@ -10,15 +10,15 @@ tfaction provides a workflow for it.
 
 1. Prepare template directories to scaffold working directories.
 
-[example](https://github.com/suzuki-shunsuke/tfaction-example/tree/main/templates/aws)
+[example](https://github.com/suzuki-shunsuke/tfaction-example/tree/main/templates/github)
 
 2. Configure `tfaction-root.yaml`'s `target_groups` to use the template.
 
-[example](https://github.com/suzuki-shunsuke/tfaction-example/blob/783dbeeea9e8da0edcfd7c02225708d2979880cd/tfaction-root.yaml#L34)
+[example](https://github.com/suzuki-shunsuke/tfaction-example/blob/4aa980bd9ab572c0bc9244d54eac5215d81ed754/tfaction-root.yaml#L36)
 
 ```yaml
 target_groups:
-  - template_dir: templates/aws
+  - template_dir: templates/github
     # ...
 ```
 
