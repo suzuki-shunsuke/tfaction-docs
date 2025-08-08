@@ -54,9 +54,16 @@ plan_workflow_name: test
 tfaction assumes that there are multiple working directories in the repository.
 Working directory is a directory where terraform commands such as `terraform init`, `terraform plan`, and `terraform apply` are run.
 tfaction treats directories where `tfaction.yaml` is located as working directories.
-Working directory has an attribute `target`, which is an identifier of the working directory. `target` must be unique.
+Each working directory has an attribute `target`, which is an identifier of the working directory.
+`target` is like an alias of a working directory.
+`target` must be unique.
 `target` is used in pull request comments and labels and the input of [scaffold working directory](/feature/scaffold-working-dir).
 The attribute `working_directory` of the working directory is a relative file path to the working directory.
+
+:::info
+As of tfaction v1.8.0, you can omit `target`.
+See also [Map working directories and targets using regular expressions](/feature/replace).
+:::
 
 ## `target_groups`
 
@@ -151,6 +158,7 @@ env:
 #   skip_adding_aqua_packages: true
 
 # tfaction >= v0.6.0
+# Optional
 drift_detection:
   enabled: false
   issue_repo_owner: suzuki-shunsuke
@@ -161,10 +169,26 @@ drift_detection:
 terraform_command: terraform
 
 # tfaction >= v1.8.0
+# optional
 conftest:
   policies:
     - policy: policy/plan
       plan: true
+
+# tfaction >= v1.9.0
+# optional
+replace:
+  patterns:
+    # Replace /services/ to / : e.g. github/services/foo => github/foo
+    - regexp: /services/
+      replace: /
+    # Replace /production$ to /prod
+    - regexp: /production$
+      replace: /prod
+    # Remove the prefix `google-` : e.g. foo/google-users/production => foo/users/prod
+    - regexp: /google-(.*)/
+      replace: "/$1/"
+      flags: g
 
 target_groups:
 - working_directory: aws/
