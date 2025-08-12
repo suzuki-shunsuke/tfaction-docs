@@ -1,7 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
-    "config:best-practices",
     "github>suzuki-shunsuke/renovate-config#3.2.2",
     "github>suzuki-shunsuke/renovate-config:nolimit#3.2.2",
     "github>aquaproj/aqua-renovate-config#2.8.2",
